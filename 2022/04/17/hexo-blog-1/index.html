@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexo 博客搭建教程 I | Argvchs の小窝</title>
+    <meta name="author" content="Argvchs">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="https://img.gejiba.com/images/01255817ab999374ffae058dd12b9817.jpg">
+    <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+    <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="/css/fonts.min.css">
+    <link rel="stylesheet" href="/css/particlex.css">
+    <script src="//cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <script src="//cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
+    <script src="//cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<body>
+    <script>
+    if (!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
+        document.writeln(
+            '<canvas id="background"><\/canvas>\n<canvas id="fireworks"><\/canvas>\n<script src="/js\/background.js"><\/script>\n<script src="/js\/fireworks.js"><\/script>'
+        );
+    </script>
+    <div id="loading"
+        style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out">
+        <div
+            style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+            <div id="loadcontent"
+                style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img alt="loading" src="https://img.gejiba.com/images/c6339d6a6619b36f49abe6151924aa2d.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="layout">
+        <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+        <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+        <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+        <transition name="into">
+            <div v-show="show_page" style="display: -not-none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Argvchs の小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;about</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show=!menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;Argvchs の小窝</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+
+</nav>
+                </div>
+                <div id="main">
+                     
+<!-- <link rel="stylesheet" href="/css/post-body.css"> -->
+<div class="article">
+    <div>
+        <h1>Hexo 博客搭建教程 I </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/4/17
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/教程">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                教程
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Hexo" style=color:#00bcd4>
+                    Hexo
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>我搭建这个博客搜了好多教程，都不是特别全，就写了这篇教程</p>
+<span id="more"></span>
+
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>学习 Markdown 语法可以看 Github 官方文档：<a target="_blank" rel="noopener" href="https://docs.github.com/cn/get-started/writing-on-github">基本撰写和格式语法</a></p>
+<h2 id="1-安装-Git-和-PNPM"><a href="#1-安装-Git-和-PNPM" class="headerlink" title="1. 安装 Git 和 PNPM"></a>1. 安装 Git 和 PNPM</h2><ul>
+<li><p>Git<br>从 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 下载 Git<br>完成后用 <code>git --version</code> 命令检查，有提示即安装正确</p>
+</li>
+<li><p>PNPM（可选）</p>
+<ul>
+<li>Windows<br><strong>在 Powershell</strong> 输入以下命令安装 PNPM<pre><code class="bash">$env:PNPM_VERSION=&#39;7.0.0-rc.2&#39; ; iwr https://get.pnpm.io/install.ps1 -useb | iex
+</code></pre>
+</li>
+<li>类 POSIX 系统<pre><code class="bash">wget -qO- https://get.pnpm.io/install.sh | PNPM_VERSION=7.0.0-rc.7 sh -
+</code></pre>
+</li>
+</ul>
+<p>完成后用 <code>pnpm -v</code> 检查<br>也可以不安装，但是后续的命令都要换成 NPM 版本的<br><strong><em>为什么要用 PNPM？</em></strong> 看速度就知道了<br><img src="https://img.gejiba.com/images/1e1a3ac11d8a1f3dc32a5858ab735ceb.png" alt="pnpm-vs-npm-vs-yarn"><br>更详细的，可以看一下 <a target="_blank" rel="noopener" href="https://www.pnpm.cn/motivation">PNPM 官方</a> 的介绍</p>
+</li>
+</ul>
+<h2 id="2-安装-Node-js"><a href="#2-安装-Node-js" class="headerlink" title="2. 安装 Node.js"></a>2. 安装 Node.js</h2><ul>
+<li>已安装 PNPM<br>运行命令 <code>pnpm env use -g lts</code> 安装 Node.js 最新 LTS 版本（注意要在管理员模式运行）<br>运行时间可能会有点长，<del><strong>也就二三十分钟</strong></del>，耐心等一下<br>完成后用<code>node -v</code> 检查，有提示即安装正确</li>
+<li>未安装 PNPM<br>从 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a> 下载 Node.js<br>完成后用 <code>node -v</code> 和 <code>npm -v</code> 两个命令检查，有提示即安装正确</li>
+</ul>
+<h2 id="3-安装-Hexo-CLI"><a href="#3-安装-Hexo-CLI" class="headerlink" title="3. 安装 Hexo CLI"></a>3. 安装 Hexo CLI</h2><p>输入命令 <code>pnpm add -g hexo</code>， 用 <code>hexo -v</code> 检查安装<br>新建一个文件夹，作为博客目录，cd 进入文件夹，运行 <code>hexo init &amp; pnpm i</code></p>
+<p>Hexo 官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs">https://hexo.io/zh-cn/docs</a></p>
+<h2 id="4-Hexo-的一些命令"><a href="#4-Hexo-的一些命令" class="headerlink" title="4. Hexo 的一些命令"></a>4. Hexo 的一些命令</h2><ul>
+<li>生成静态文件：<code>hexo g</code></li>
+<li>清除静态文件：<code>hexo cl</code></li>
+<li>在本地运行：<code>hexo s</code></li>
+<li>部署到网站：<code>hexo d</code></li>
+<li>生成静态文件并部署到网站：<code>hexo d -g</code> 或 <code>hexo g -d</code></li>
+<li>创建新文章：<code>hexo new &lt;post-name&gt;</code> <strong><code>&lt;post-name&gt;</code> 为文件名</strong>*</li>
+</ul>
+<p><strong>P.S.：创建新文章命令中的<code>&lt;post-name&gt;</code>是文件名，标题在文章中的 title 参数中修改，文件名建议全部小写，若有大写字母，部署后部分主题可能会 404</strong></p>
+<p>下一篇：<a href="/2022/04/17/hexo-blog-2">Hexo 博客搭建教程 II</a></p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2022 - 2022 Argvchs の小窝
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Argvchs
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+                </div>
+            </div>
+        </transition>
+        <div id="img_show">
+            <img id="img_content" alt="img_show">
+        </div>
+    </div>
+    <div id="L2dCanvas"></div>
+    <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="/js/particle.js"></script>
+    <script src="/js/live2d.min.js"></script>
+    <script src="/js/showimg.js"></script>
+    <script type="module">
+    console.info("Welcome to Argvchs's blog!");
+    var v = new Viewer({
+        width: 240,
+        height: 325,
+        basePath: "/model",
+        role: "dunkeerke_2",
+        mobile: true
+    });
+    </script>
+    
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = '170844d595d9facb0be0', clientSecret = '21b990860bd70f9ac33d06f06d3232e82c464a3a';
+    
+    if (window.location.host == 'argvchs.github.io') {
+        clientID = '170844d595d9facb0be0';
+        clientSecret = '21b990860bd70f9ac33d06f06d3232e82c464a3a';
+    }
+    
+    if (window.location.host == 'argvchs.netlify.app') {
+        clientID = '10e5540a489691cc9d41';
+        clientSecret = 'b85c16d808150287a7ba8215fa9021470783909d';
+    }
+    
+    if (window.location.host == 'argvchs.vercel.app') {
+        clientID = 'cc3e39819ab1db56cbcc';
+        clientSecret = '31e556e8e6275f47e1c847c368b654e7f26544b1';
+    }
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: 'gitalk-comments',      // The repository of store comments,
+        owner: 'argvchs',
+        admin: ['argvchs'],
+        language: 'zh-CN',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+
+</body>
+</html>

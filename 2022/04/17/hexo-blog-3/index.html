@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="zh ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexo 博客搭建教程 III | Argvchs の小窝</title>
+    <meta name="author" content="Argvchs">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="https://img.gejiba.com/images/01255817ab999374ffae058dd12b9817.jpg">
+    <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+    <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="/css/fonts.min.css">
+    <link rel="stylesheet" href="/css/particlex.css">
+    <script src="//cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <script src="//cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
+    <script src="//cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<body>
+    <script>
+    if (!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
+        document.writeln(
+            '<canvas id="background"><\/canvas>\n<canvas id="fireworks"><\/canvas>\n<script src="/js\/background.js"><\/script>\n<script src="/js\/fireworks.js"><\/script>'
+        );
+    </script>
+    <div id="loading"
+        style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out">
+        <div
+            style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+            <div id="loadcontent"
+                style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img alt="loading" src="https://img.gejiba.com/images/c6339d6a6619b36f49abe6151924aa2d.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="layout">
+        <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+        <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+        <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+        <transition name="into">
+            <div v-show="show_page" style="display: -not-none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Argvchs の小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;about</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show=!menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;Argvchs の小窝</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+
+</nav>
+                </div>
+                <div id="main">
+                     
+<!-- <link rel="stylesheet" href="/css/post-body.css"> -->
+<div class="article">
+    <div>
+        <h1>Hexo 博客搭建教程 III </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/4/17
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/教程">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                教程
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Hexo" style=color:#03a9f4>
+                    Hexo
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>书接上文：<a href="/2022/04/17/hexo-blog-2">Hexo 博客搭建教程 II</a></p>
+<span id="more"></span>
+
+<h2 id="1-目录介绍"><a href="#1-目录介绍" class="headerlink" title="1. 目录介绍"></a>1. 目录介绍</h2><p>介绍一下博客根目录各文件夹&#x2F;文件的作用，我的主题用的是 EJS，其他如 Pug&#x2F;Jade 等相差太大的模板引擎请不要参考本篇<del>（我太懒了）</del></p>
+<pre><code class="plain">&lt;root&gt;
+|---public # 静态网页文件
+|---source # 文章（不要和主题文件夹下的source弄混）
+|---themes # 主题
+    |---&lt;theme-name&gt;
+        |---layout # 布局文件
+        |   |---layout.ejs # 网页的基本布局
+        |---source # 主题资源文件，里面的内容会生成到静态文件下
+</code></pre>
+<h2 id="2-添加自定义-JS-x2F-CSS"><a href="#2-添加自定义-JS-x2F-CSS" class="headerlink" title="2. 添加自定义 JS&#x2F;CSS"></a>2. 添加自定义 JS&#x2F;CSS</h2><p>在 <code>&lt;root&gt;\themes\&lt;theme-name&gt;\source</code> 下添加自定义文件（最好把文件放在 js、css…文件夹下分类，不然生成的静态文件会很乱），然后在 layout.ejs 下添加如下内容，如果使用网络上的文件直接在 src&#x2F;href 中填写路径即可<br><strong>&lt;file-name&gt;为自定义文件名称</strong></p>
+<pre><code class="html">&lt;!--JS--&gt;
+&lt;script src=&quot;/&lt;file-name&gt;&quot;&gt;&lt;/script&gt;
+&lt;!--CSS--&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;file-name&gt;&quot; /&gt;
+</code></pre>
+<h2 id="3-我用的自定义文件"><a href="#3-我用的自定义文件" class="headerlink" title="3. 我用的自定义文件"></a>3. 我用的自定义文件</h2><p>live2d.min.js：Live2D 组件，需要前置 PIXI.js</p>
+<ul>
+<li><p>使用：将<a target="_blank" rel="noopener" href="https://github.com/imuncle/live2d">https://github.com/imuncle/live2d</a>这里的 Live2D 模型 Clone 到本地，选择一个喜<font color="red">❤</font>欢的模型（必须是 Cubism3 版本的，在 <code>live2d_3</code> 文件夹下）复制到<code>&lt;root&gt;\themes\&lt;theme-name&gt;\source\model</code><br><strong>&lt;model-name&gt;为模型名称，参数和我给的 CSS 样式可以更改，以下是我的配置</strong></p>
+<pre><code class="html">&lt;div id=&quot;L2dCanvas&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;/js/live2d.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/css/live2d.css&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    var v = new Viewer(&#123;
+        width: 240,
+        height: 325,
+        right: &quot;0&quot;,
+        bottom: &quot;0&quot;,
+        basePath: &quot;/model&quot;,
+        role: &quot;&lt;model-name&gt;&quot;,
+        mobile: true,
+    &#125;);
+&lt;/script&gt;
+</code></pre>
+</li>
+<li><p>下载：</p>
+<ul>
+<li><a href="/js/live2d.min.js">live2d.min.js</a></li>
+<li><a href="/assets/live2d.css">live2d.css</a></li>
+<li><a href="/assets/model.zip">live2d.zip</a>（我用的 Live2d 模型）</li>
+</ul>
+</li>
+</ul>
+<p>fireworks.js：鼠标点击特效，需要前置 Anime.js</p>
+<ul>
+<li>使用：<pre><code class="html">&lt;canvas
+    id=&quot;fireworks&quot;
+    style=&quot;position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:2147483647&quot;
+&gt;&lt;/canvas&gt;
+&lt;script src=&quot;/js/fireworks.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+</li>
+<li>下载：<a href="/js/fireworks.js">fireworks.js</a></li>
+</ul>
+<p>background.js：流星背景特效</p>
+<ul>
+<li>使用：<pre><code class="html">&lt;canvas
+    id=&quot;background&quot;
+    style=&quot;position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1&quot;
+&gt;&lt;/canvas&gt;
+&lt;script src=&quot;/js/background.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+</li>
+<li>下载：<a href="/js/background.js">background.js</a></li>
+</ul>
+<h2 id="4-Hexo-Markdown-语法补充"><a href="#4-Hexo-Markdown-语法补充" class="headerlink" title="4. Hexo Markdown 语法补充"></a>4. Hexo Markdown 语法补充</h2><p>Markdown 是支持渲染 HTML 的，所以可以实现各种效果<br>如果你要不使 HTML 标签被渲染可以在右边的小于号加 <code>\</code> 转义，如 <code>&lt;tag\&gt;</code>，但还是推荐<code>`tag`</code>的代码格式</p>
+<ul>
+<li><p>字体<br>用 <code>&lt;font&gt;</code> 来实现字体的样式修改<br><strong><code>&lt;color&gt;</code> <code>&lt;size&gt;</code> <code>&lt;face&gt;</code> 分别是你字体的颜色，大小和字体名称</strong></p>
+<pre><code class="markdown">&lt;font color=&lt;color&gt; size=&lt;size&gt; face=&lt;face&gt;&gt;Text...&lt;/font&gt;
+</code></pre>
+</li>
+<li><p>下载文件<br>Markdown 下载文件，网上搜到的都是 post_asset_folder 这个参数<del>（也不知道为什么我不能用）</del><br>只要把文件放到<code>&lt;root&gt;\theme\&lt;theme-name&gt;\source</code> 下（同样，最好分类一下），在 Markdown 中引用就行<br>部分文件可能不会下载，在浏览器打开，如果有洁癖可以用第二种方法<br><strong>&lt;file-name&gt;为文件名</strong></p>
+<pre><code class="markdown">[Description...](/file-name)
+&lt;a href=&quot;&lt;file-name&gt;&quot; download&gt;Description...&lt;/a&gt;
+</code></pre>
+</li>
+<li><p>注释<br>Markdown 注释和 HTML 一样</p>
+<pre><code class="markdown">&lt;!-- Comment... --&gt;
+</code></pre>
+<p>特别的，用 <code>&lt;!-- more --&gt;</code> 可以控制主页预览内容，后面的内容在显示全文时才出现</p>
+</li>
+<li><p>解决部分主题没有块引用的样式<br>块引用会解析成 <code>&lt;blockquote&gt;</code> 标签，添加自定义 CSS 即可</p>
+</li>
+</ul>
+<p>下一篇：<a href="/2022/04/17/hexo-blog-4">Hexo 博客搭建教程 IV</a></p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2022 - 2022 Argvchs の小窝
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Argvchs
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+                </div>
+            </div>
+        </transition>
+        <div id="img_show">
+            <img id="img_content" alt="img_show">
+        </div>
+    </div>
+    <div id="L2dCanvas"></div>
+    <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="/js/particle.js"></script>
+    <script src="/js/live2d.min.js"></script>
+    <script src="/js/showimg.js"></script>
+    <script type="module">
+    console.info("Welcome to Argvchs's blog!");
+    var v = new Viewer({
+        width: 240,
+        height: 325,
+        basePath: "/model",
+        role: "dunkeerke_2",
+        mobile: true
+    });
+    </script>
+    
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = '170844d595d9facb0be0', clientSecret = '21b990860bd70f9ac33d06f06d3232e82c464a3a';
+    
+    if (window.location.host == 'argvchs.github.io') {
+        clientID = '170844d595d9facb0be0';
+        clientSecret = '21b990860bd70f9ac33d06f06d3232e82c464a3a';
+    }
+    
+    if (window.location.host == 'argvchs.netlify.app') {
+        clientID = '10e5540a489691cc9d41';
+        clientSecret = 'b85c16d808150287a7ba8215fa9021470783909d';
+    }
+    
+    if (window.location.host == 'argvchs.vercel.app') {
+        clientID = 'cc3e39819ab1db56cbcc';
+        clientSecret = '31e556e8e6275f47e1c847c368b654e7f26544b1';
+    }
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: 'gitalk-comments',      // The repository of store comments,
+        owner: 'argvchs',
+        admin: ['argvchs'],
+        language: 'zh-CN',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+
+</body>
+</html>
