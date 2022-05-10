@@ -176,14 +176,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style=color:#ff7d73>
+                <a href="/tags/Hexo" style=color:#03a9f4>
                     Hexo
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/主题" style=color:#00bcd4>
+                <a href="/tags/主题" style=color:#ff7d73>
                     主题
                 </a>
             </span>
@@ -299,16 +299,17 @@ home_background: # Background URL
 <p><strong>同样如果没有其他网站，请在 <code>sites:</code> 后添加一个 <code>[]</code></strong></p>
 <pre><code class="yaml">gitalk:
     enable: true
-    clientID: 170844d595d9facb0be0 # Default ClientID
-    clientSecret: 21b990860bd70f9ac33d06f06d3232e82c464a3a # Default ClientSecret
-    repo: gitalk-comments # The name of repository of store comments
-    owner: argvchs # GitHub repo owner
-    admin: argvchs # GitHub repo owner and collaborators, only these guys can initialize github issues
+    clientID: # Default ClientID
+    clientSecret: # Default ClientSecret
+    repo: # The name of repository of store comments
+    owner: # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
     language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
     sites: # Other sites
-        Example:
-            clientID: 170844d595d9facb0be0
-            clientSecret: 21b990860bd70f9ac33d06f06d3232e82c464a3a
+        # Example:
+        # &lt;www.example.com&gt;:
+        #    clientID: &lt;client-id&gt;
+        #    clientSecret: &lt;client-secret&gt;
 </code></pre>
 </li>
 </ul>
