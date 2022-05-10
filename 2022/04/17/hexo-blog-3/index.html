@@ -1,53 +1,38 @@
 
 <!DOCTYPE html>
-<html lang="zh ">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hexo 博客搭建教程 III | Argvchs の小窝</title>
-    <meta name="author" content="Argvchs">
-    <meta name="description" content=" ">
-    <meta name="keywords" content=" ">
-    <link rel="icon" href="https://img.gejiba.com/images/01255817ab999374ffae058dd12b9817.jpg">
-    <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
-    <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
-    <link rel="stylesheet" href="/css/fonts.min.css">
-    <link rel="stylesheet" href="/css/particlex.css">
-    <script src="//cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
-    <script src="//cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
-    <script src="//cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-<meta name="generator" content="Hexo 6.1.0"></head>
-<body>
-    <script>
-    if (!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
-        document.writeln(
-            '<canvas id="background"><\/canvas>\n<canvas id="fireworks"><\/canvas>\n<script src="/js\/background.js"><\/script>\n<script src="/js\/fireworks.js"><\/script>'
-        );
-    </script>
-    <div id="loading"
-        style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out">
-        <div
-            style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
-            <div id="loadcontent"
-                style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
-                <div>
-                    <h2>LOADING...</h2>
-                    <p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p>
-                    <div>
-                        <img alt="loading" src="https://img.gejiba.com/images/c6339d6a6619b36f49abe6151924aa2d.gif">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="layout">
-        <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
-        <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
-        <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
-        <transition name="into">
-            <div v-show="show_page" style="display: -not-none;">
-                <div id="menu_show">
-                     
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Hexo 博客搭建教程 III | Argvchs の小窝</title>
+        <meta name="author" content="Argvchs">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="https://img.gejiba.com/images/01255817ab999374ffae058dd12b9817.jpg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+        <script src="https://cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
+        <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+    <meta name="generator" content="Hexo 6.1.0"></head>
+    <body>
+        <script>
+            if (!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
+                document.writeln(
+                    `<canvas id="background"><\/canvas>\n<canvas id="fireworks"><\/canvas>\n<script src="/js\/background.js"><\/script>\n<script src="/js\/fireworks.js"><\/script>`
+                );
+        </script>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="https://img.gejiba.com/images/c6339d6a6619b36f49abe6151924aa2d.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
 <nav id="menu">
     <div class="desktop-menu">
         <a href="/">
@@ -80,10 +65,9 @@
         </a>
         
     </div>
-
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div class="curtain" @click="menu_show=!menu_show" v-show="menu_show"></div>
-        <div :class="'title'" @click="menu_show=!menu_show">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;Argvchs の小窝</span>
         </div>
@@ -92,57 +76,56 @@
             
             <a href="/">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-solid fa-house fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
                 </div>
             </a>
             
             <a href="/about">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-solid fa-id-card fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
                 </div>
             </a>
             
             <a href="/archives">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-solid fa-box-archive fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
                 </div>
             </a>
             
             <a href="/categories">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-solid fa-bookmark fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
                 </div>
             </a>
             
             <a href="/tags">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-solid fa-tags fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
                 </div>
             </a>
             
         </div>
         </transition>
     </div>
-
 </nav>
-                </div>
-                <div id="main">
-                    
+                    </div>
+                    <div id="main">
+                        
 <div class="article">
     <div>
         <h1>Hexo 博客搭建教程 III </h1>
@@ -154,7 +137,6 @@
             </span>
             2022/4/17
         </span>
-
         
         <span class="category">
             <a href="/categories/教程">
@@ -165,9 +147,7 @@
             </a>
         </span>
         
-
         
-
         <span class="tags">
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
@@ -175,7 +155,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style=color:#00bcd4>
+                <a href="/tags/Hexo" style="color: #ff7d73">
                     Hexo
                 </a>
             </span>
@@ -183,7 +163,6 @@
         </span>
         
     </div>
-
     <div class="content" v-pre>
         <p>书接上文：<a href="/2022/04/17/hexo-blog-2">Hexo 博客搭建教程 II</a></p>
 <span id="more"></span>
@@ -275,7 +254,6 @@
 <p>下一篇：<a href="/2022/04/17/hexo-blog-4">Hexo 博客搭建教程 IV</a></p>
 
     </div>
-
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
     <div id="comment">
@@ -284,7 +262,7 @@
     </div>
     
 </div>
-                     
+                         
 <footer id="footer">
     <div class="footer-wrap">
         <div>
@@ -299,64 +277,62 @@
                 target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
         
     </div>
-
 </footer>
-
+                    </div>
                 </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
             </div>
-        </transition>
-        <div id="img_show">
-            <img id="img_content" alt="img_show">
         </div>
-    </div>
-    <div id="L2dCanvas"></div>
-    <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
-    <script src="/js/particle.js"></script>
-    <script src="/js/live2d.min.js"></script>
-    <script src="/js/showimg.js"></script>
-    <script type="module">
-    console.info("Welcome to Argvchs's blog!");
-    var v = new Viewer({
-        width: 240,
-        height: 325,
-        basePath: "/model",
-        role: "dunkeerke_2",
-        mobile: true
-    });
-    </script>
-    
+        <div id="L2dCanvas"></div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/live2d.min.js"></script>
+        <script src="/js/showimg.js"></script>
+        <script type="module">
+            console.info("Welcome to Argvchs' blog!");
+            var v = new Viewer({
+                width: 240,
+                height: 325,
+                basePath: "/model",
+                role: "dunkeerke_2",
+                mobile: true
+            });
+        </script>
+        
 <script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
 <script>
-    var clientID = '170844d595d9facb0be0', clientSecret = '21b990860bd70f9ac33d06f06d3232e82c464a3a';
+    var clientID = "170844d595d9facb0be0", clientSecret = "21b990860bd70f9ac33d06f06d3232e82c464a3a";
     
-    if (window.location.host == 'argvchs.github.io') {
-        clientID = '170844d595d9facb0be0';
-        clientSecret = '21b990860bd70f9ac33d06f06d3232e82c464a3a';
+    if (window.location.host == "argvchs.github.io") {
+        clientID = "170844d595d9facb0be0";
+        clientSecret = "21b990860bd70f9ac33d06f06d3232e82c464a3a";
     }
     
-    if (window.location.host == 'argvchs.netlify.app') {
-        clientID = '10e5540a489691cc9d41';
-        clientSecret = 'b85c16d808150287a7ba8215fa9021470783909d';
+    if (window.location.host == "argvchs.netlify.app") {
+        clientID = "10e5540a489691cc9d41";
+        clientSecret = "b85c16d808150287a7ba8215fa9021470783909d";
     }
     
-    if (window.location.host == 'argvchs.vercel.app') {
-        clientID = 'cc3e39819ab1db56cbcc';
-        clientSecret = '31e556e8e6275f47e1c847c368b654e7f26544b1';
+    if (window.location.host == "argvchs.vercel.app") {
+        clientID = "cc3e39819ab1db56cbcc";
+        clientSecret = "31e556e8e6275f47e1c847c368b654e7f26544b1";
     }
     
     const gitalk = new Gitalk({
         clientID: clientID,
         clientSecret: clientSecret,
-        repo: 'gitalk-comments',      // The repository of store comments,
-        owner: 'argvchs',
-        admin: ['argvchs'],
-        language: 'zh-CN',
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-        distractionFreeMode: true  // Facebook-like distraction free mode
+        repo: "gitalk-comments",
+        owner: "argvchs",
+        admin: ["argvchs"],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: true
     })
-    gitalk.render('gitalk-container')
+    gitalk.render("gitalk-container")
 </script>
 
 
-</body>
+    </body>
 </html>
