@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Hexo 博客搭建教程 IV | Argvchs の小窝</title>
+        <title>Hexo 博客使用 LaTeX | Argvchs の小窝</title>
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -128,65 +128,22 @@
                         
 <div class="article">
     <div>
-        <h1>Hexo 博客搭建教程 IV </h1>
+        <h1>Hexo 博客使用 LaTeX </h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
             </span>
-            2022/4/17
+            2022/6/17
         </span>
         
-        <span class="category">
-            <a href="/categories/教程">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                </span>
-                教程
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/Hexo" style="color: #ffa2c4">
-                    Hexo
-                </a>
-            </span>
-            
-        </span>
         
     </div>
     <div class="content" v-pre>
-        <p>书接上文：<a href="/2022/04/17/hexo-blog-3">Hexo 博客搭建教程 III</a></p>
-<span id="more"></span>
+        <img src="https://latex.codecogs.com/png.image?\dpi{300}D(x)&space;=&space;\begin{cases}\lim\limits_{x&space;\to&space;0}&space;\frac{a^x}{b&plus;c},&space;&&space;x%3C3&space;\\\pi,&space;&&space;x=3&space;\\\int_a^{3b}x_{ij}&plus;e^2&space;\mathrm{d}x,&&space;x%3E3&space;\\\end{cases}" style="max-height:100%; transform-origin: 0% 0%; transform:scale(0.3)">
 
-<h2 id="1-配置-SSH-密钥"><a href="#1-配置-SSH-密钥" class="headerlink" title="1. 配置 SSH 密钥"></a>1. 配置 SSH 密钥</h2><p>首先要有一个 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 账号<br><strong><code>&lt;name&gt;</code> 和 <code>&lt;email&gt;</code> 分别是你自己的 Github 用户名和注册时使用的邮箱</strong><br>注册完成后回到主页，点击左边的绿色按钮 New，新建一个项目，名称为<code>&lt;name&gt;.github.io</code>，比如我的用户名是 argvchs，那么名称就是 argvchs.github.io，然后点击 Create repositpory 创建<br>在命令行输入命令 <code>ssh-keygen -t rsa -C &quot;email@email.com&quot;</code>，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了<br>输入命令 <code>notepad %USERPROFILE%\.ssh\id_rsa.pub</code>，打开 SSH 密钥，先不用管，后面会用到<br>打开你 Github 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG keys，点击右上角的 New SSH key，将刚才打开的 SSH 密钥复制到 Key 中，Title 不用写，点击 Add SSH key 添加密钥<br>设置好 SSH 密钥后用 <code>ssh -T git@github.com</code> 检测，如果出现 <code>Hi, xxx! You&#39;ve successfully authenticated</code> 则配置成功</p>
-<h2 id="2-部署到-Github-Pages"><a href="#2-部署到-Github-Pages" class="headerlink" title="2. 部署到 Github Pages"></a>2. 部署到 Github Pages</h2><p>使用下面的命令初始配置</p>
-<pre><code class="bash">git config --global user.name &quot;&lt;name&gt;&quot;
-git config --global user.email &quot;&lt;email&gt;&quot;
-</code></pre>
-<p>打开你博客根目录的_config.yml，设置参数</p>
-<pre><code class="yaml">url: https://&lt;name&gt;.github.io/
-# ...
-deploy:
-    type: git
-    repo: git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git
-    branch: master
-    message:
-</code></pre>
-<p>设置好参数，使用下面的命令安装部署插件，安装了才能部署到 Github Pages</p>
-<pre><code class="bash">npm i -S hexo-deployer-git
-</code></pre>
-<p>在博客根目录下使用 <code>hexo d -g</code> 部署到 Github Pages</p>
-<h2 id="3-部署到-Vercel-加速访问"><a href="#3-部署到-Vercel-加速访问" class="headerlink" title="3. 部署到 Vercel 加速访问"></a>3. 部署到 Vercel 加速访问</h2><p>先注册一个 <a target="_blank" rel="noopener" href="https://vercel.com/login">Vercel</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 New project，跳转后在 Import Git Repository 中选择你的 Hexo 博客项目，跳转后点击 Deploy 上传到 Vercel<br>上传完成点击 Goto Dashboard 来到项目主页，选择顶部的 Settings，在 Project Name 中更改你网站的名称</p>
-<h2 id="4-部署到-Netlify-加速访问"><a href="#4-部署到-Netlify-加速访问" class="headerlink" title="4. 部署到 Netlify 加速访问"></a>4. 部署到 Netlify 加速访问</h2><p>先注册一个 <a target="_blank" rel="noopener" href="https://app.netlify.com/">Netlify</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 Add new site 中的 Import an existing project，点击 Github，与 Github 关联<br>关联 Github 后在下面会出现你 Github 中的项目，点击你创建的 Hexo 博客项目，再点击 Deploy site 上传<br>上传完成会跳转到项目主页，选择 Site settings，跳转后往下滑，点击 Change site name 更改你网站的名称</p>
+<h1 id="HAHA"><a href="#HAHA" class="headerlink" title="HAHA"></a>HAHA</h1><span id="more"></span>
 
     </div>
     

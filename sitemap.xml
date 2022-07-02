@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-4/</loc>
+    
+    <lastmod>2022-07-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-1/</loc>
+    
+    <lastmod>2022-07-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://argvchs.github.io/2022/06/17/hexo-latex/</loc>
+    
+    <lastmod>2022-06-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://argvchs.github.io/2022/05/10/hexo-theme-particlex/</loc>
     
     <lastmod>2022-05-11</lastmod>
@@ -23,24 +50,6 @@
     <loc>https://argvchs.github.io/2022/04/17/hexo-blog-2/</loc>
     
     <lastmod>2022-05-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-1/</loc>
-    
-    <lastmod>2022-05-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-4/</loc>
-    
-    <lastmod>2022-05-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +94,7 @@
 
   <url>
     <loc>https://argvchs.github.io/</loc>
-    <lastmod>2022-05-11</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,14 +102,14 @@
   
   <url>
     <loc>https://argvchs.github.io/tags/Hexo/</loc>
-    <lastmod>2022-05-11</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://argvchs.github.io/tags/%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2022-05-11</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -109,14 +118,14 @@
   
   <url>
     <loc>https://argvchs.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-05-11</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://argvchs.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-05-11</lastmod>
+    <lastmod>2022-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

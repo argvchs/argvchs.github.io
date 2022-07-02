@@ -16,7 +16,7 @@
         <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
         <script src="https://cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
         <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-    <meta name="generator" content="Hexo 6.1.0"></head>
+    <meta name="generator" content="Hexo 6.2.0"></head>
     <body>
         <script>
             if (!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
@@ -168,26 +168,12 @@
 <span id="more"></span>
 
 <h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>学习 Markdown 语法可以看 Github 官方文档：<a target="_blank" rel="noopener" href="https://docs.github.com/cn/get-started/writing-on-github">基本撰写和格式语法</a></p>
-<h2 id="1-安装-Git-和-PNPM"><a href="#1-安装-Git-和-PNPM" class="headerlink" title="1. 安装 Git 和 PNPM"></a>1. 安装 Git 和 PNPM</h2><ul>
-<li><p>Git<br>从 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 下载 Git<br>完成后用 <code>git --version</code> 命令检查，有提示即安装正确</p>
-</li>
-<li><p>PNPM（可选）</p>
-<ul>
-<li>Windows<br><strong>在 Powershell</strong> 输入以下命令安装 PNPM<pre><code class="bash">$env:PNPM_VERSION=&#39;7.0.0-rc.2&#39; ; iwr https://get.pnpm.io/install.ps1 -useb | iex
-</code></pre>
-</li>
-<li>类 POSIX 系统<pre><code class="bash">wget -qO- https://get.pnpm.io/install.sh | PNPM_VERSION=7.0.0-rc.7 sh -
-</code></pre>
-</li>
+<h2 id="1-安装-Git-和-Node-js"><a href="#1-安装-Git-和-Node-js" class="headerlink" title="1. 安装 Git 和 Node.js"></a>1. 安装 Git 和 Node.js</h2><ul>
+<li>Git<br>从 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 下载 Git<br>完成后用 <code>git --version</code> 命令检查，有提示即安装正确</li>
+<li>Node.js<br>从 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a> 下载 Node.js，选择 LTS 版本，安装一路确认即可<br>完成后用 <code>node -v</code> 和 <code>npm -v</code> 两个命令检查，有提示即安装正确</li>
 </ul>
-<p>完成后用 <code>pnpm -v</code> 检查<br>也可以不安装，但是后续的命令都要换成 NPM 版本的<br><strong><em>为什么要用 PNPM？</em></strong> 看速度就知道了<br><img src="https://img.gejiba.com/images/1e1a3ac11d8a1f3dc32a5858ab735ceb.png" alt="pnpm-vs-npm-vs-yarn"><br>更详细的，可以看一下 <a target="_blank" rel="noopener" href="https://www.pnpm.cn/motivation">PNPM 官方</a> 的介绍</p>
-</li>
-</ul>
-<h2 id="2-安装-Node-js"><a href="#2-安装-Node-js" class="headerlink" title="2. 安装 Node.js"></a>2. 安装 Node.js</h2><ul>
-<li>已安装 PNPM<br>运行命令 <code>pnpm env use -g lts</code> 安装 Node.js 最新 LTS 版本（注意要在管理员模式运行）<br>运行时间可能会有点长，<del><strong>也就二三十分钟</strong></del>，耐心等一下<br>完成后用<code>node -v</code> 检查，有提示即安装正确</li>
-<li>未安装 PNPM<br>从 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a> 下载 Node.js<br>完成后用 <code>node -v</code> 和 <code>npm -v</code> 两个命令检查，有提示即安装正确</li>
-</ul>
-<h2 id="3-安装-Hexo-CLI"><a href="#3-安装-Hexo-CLI" class="headerlink" title="3. 安装 Hexo CLI"></a>3. 安装 Hexo CLI</h2><p>输入命令 <code>pnpm add -g hexo</code>， 用 <code>hexo -v</code> 检查安装<br>新建一个文件夹，作为博客目录，cd 进入文件夹，运行 <code>hexo init &amp; pnpm i</code></p>
+<h2 id="2-启用-Corepack（可选）"><a href="#2-启用-Corepack（可选）" class="headerlink" title="2. 启用 Corepack（可选）"></a>2. 启用 Corepack（可选）</h2><p>运行 <code>corepack enable</code> 启用 Corepack<br>启用后自动安装 Yarn 和 PNPM，这样以后的命令都可以换成自己喜欢的包管理器<br>这里是速度比较参考<br><img src="https://img.gejiba.com/images/1e1a3ac11d8a1f3dc32a5858ab735ceb.png" alt="pnpm-vs-npm-vs-yarn"><br>虽然 PNPM 较快，但创建 Vue&#x2F;React 项目时可能会有错误</p>
+<h2 id="3-安装-Hexo-CLI"><a href="#3-安装-Hexo-CLI" class="headerlink" title="3. 安装 Hexo CLI"></a>3. 安装 Hexo CLI</h2><p>输入命令 <code>npm i -g hexo</code>， 用 <code>hexo -v</code> 检查安装<br>新建一个文件夹，作为博客目录，cd 进入文件夹，运行 <code>hexo init &amp; npm i</code></p>
 <p>Hexo 官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs">https://hexo.io/zh-cn/docs</a></p>
 <h2 id="4-Hexo-的一些命令"><a href="#4-Hexo-的一些命令" class="headerlink" title="4. Hexo 的一些命令"></a>4. Hexo 的一些命令</h2><ul>
 <li>生成静态文件：<code>hexo g</code></li>
