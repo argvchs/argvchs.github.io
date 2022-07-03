@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Hexo 博客搭建教程 I | Argvchs の小窝</title>
+        <title>Tags: LaTeX | Argvchs の小窝</title>
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -125,75 +125,89 @@
 </nav>
                     </div>
                     <div id="main">
-                        
-<div class="article">
-    <div>
-        <h1>Hexo 博客搭建教程 I </h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
-            </span>
-            2022/4/17
-        </span>
+                         
+<div class="categories-tags">
+    
+    <div class="all-s">
         
-        <span class="category">
-            <a href="/categories/教程">
+        
+        <span>
+            <a href="/tags/Hexo/" style="background: #00bcd4">
                 <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
                 </span>
-                教程
+                Hexo
             </a>
         </span>
         
         
-        <span class="tags">
-            <span class="icon">
-                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/Hexo" style="color: #00a596">
-                    Hexo
-                </a>
-            </span>
-            
+        <span>
+            <a href="/tags/LaTeX/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                </span>
+                LaTeX
+            </a>
+        </span>
+        
+        
+        <span>
+            <a href="/tags/主题/" style="background: #ffa2c4">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                </span>
+                主题
+            </a>
         </span>
         
     </div>
-    <div class="content" v-pre>
-        <p>我搭建这个博客搜了好多教程，都不是特别全，就写了这篇教程</p>
-<span id="more"></span>
-
-<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>学习 Markdown 语法可以看 Github 官方文档：<a target="_blank" rel="noopener" href="https://docs.github.com/cn/get-started/writing-on-github">基本撰写和格式语法</a></p>
-<h2 id="1-安装-Git-和-Node-js"><a href="#1-安装-Git-和-Node-js" class="headerlink" title="1. 安装 Git 和 Node.js"></a>1. 安装 Git 和 Node.js</h2><ul>
-<li>Git<br>从 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 下载 Git<br>完成后用 <code>git --version</code> 命令检查，有提示即安装正确</li>
-<li>Node.js<br>从 <a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org</a> 下载 Node.js，选择 LTS 版本，安装一路确认即可<br>完成后用 <code>node -v</code> 和 <code>npm -v</code> 两个命令检查，有提示即安装正确</li>
-</ul>
-<h2 id="2-启用-Corepack（可选）"><a href="#2-启用-Corepack（可选）" class="headerlink" title="2. 启用 Corepack（可选）"></a>2. 启用 Corepack（可选）</h2><p>运行 <code>corepack enable</code> 启用 Corepack<br>启用后自动安装 Yarn 和 PNPM，这样以后的命令都可以换成自己喜欢的包管理器<br>这里是速度参考<br><img src="https://cdn-image-argvchs.netlify.app/pnpm-vs-npm-vs-yarn.svg" alt="pnpm-vs-npm-vs-yarn"><br>虽然 PNPM 较快，但创建 Vue&#x2F;React 项目时可能会有错误</p>
-<h2 id="3-安装-Hexo-CLI"><a href="#3-安装-Hexo-CLI" class="headerlink" title="3. 安装 Hexo CLI"></a>3. 安装 Hexo CLI</h2><p>输入命令 <code>npm i -g hexo</code>， 用 <code>hexo -v</code> 检查安装<br>新建一个文件夹，作为博客目录，cd 进入文件夹，运行 <code>hexo init &amp; npm i</code></p>
-<p>Hexo 官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs">https://hexo.io/zh-cn/docs</a></p>
-<h2 id="4-Hexo-的一些命令"><a href="#4-Hexo-的一些命令" class="headerlink" title="4. Hexo 的一些命令"></a>4. Hexo 的一些命令</h2><ul>
-<li>生成静态文件：<code>hexo g</code></li>
-<li>清除静态文件：<code>hexo cl</code></li>
-<li>在本地运行：<code>hexo s</code></li>
-<li>部署到网站：<code>hexo d</code></li>
-<li>生成静态文件并部署到网站：<code>hexo d -g</code> 或 <code>hexo g -d</code></li>
-<li>创建新文章：<code>hexo new &lt;post-name&gt;</code> <strong><code>&lt;post-name&gt;</code> 为文件名</strong>*</li>
-</ul>
-<p><strong>P.S.：创建新文章命令中的<code>&lt;post-name&gt;</code>是文件名，标题在文章中的 title 参数中修改，文件名建议全部小写，若有大写字母，部署后部分主题可能会 404</strong></p>
-<p>下一篇：<a href="/2022/04/17/hexo-blog-2">Hexo 博客搭建教程 II</a></p>
-
-    </div>
-    
-    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
-    <div id="comment">
-        <div id="gitalk-container">
+    <div id="archives">
+        
+        <div class="timeline">
+            <div class="timeline-tail"></div>
+            <div class="timeline-content">
+                <div class="item-time">2022/6/17</div>
+                <a href="/2022/06/17/hexo-latex/">
+                    <h3>Hexo 博客使用 LaTeX</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/教程">
+                            <span class="icon">
+                                <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                            </span>
+                            教程
+                        </a>
+                    </span>
+                    
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/Hexo" style="color: #00a596">
+                                Hexo
+                            </a>
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/LaTeX" style="color: #ffa2c4">
+                                LaTeX
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </div>
         </div>
+        
     </div>
-    
 </div>
                          
 <footer id="footer">
@@ -234,38 +248,6 @@
             // });
         </script>
         
-<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
-<script>
-    var clientID = "170844d595d9facb0be0", clientSecret = "21b990860bd70f9ac33d06f06d3232e82c464a3a";
-    
-    if (window.location.host == "argvchs.github.io") {
-        clientID = "170844d595d9facb0be0";
-        clientSecret = "21b990860bd70f9ac33d06f06d3232e82c464a3a";
-    }
-    
-    if (window.location.host == "argvchs.netlify.app") {
-        clientID = "10e5540a489691cc9d41";
-        clientSecret = "b85c16d808150287a7ba8215fa9021470783909d";
-    }
-    
-    if (window.location.host == "argvchs.vercel.app") {
-        clientID = "cc3e39819ab1db56cbcc";
-        clientSecret = "31e556e8e6275f47e1c847c368b654e7f26544b1";
-    }
-    
-    const gitalk = new Gitalk({
-        clientID: clientID,
-        clientSecret: clientSecret,
-        repo: "gitalk-comments",
-        owner: "argvchs",
-        admin: ["argvchs"],
-        language: "zh-CN",
-        id: location.pathname,
-        distractionFreeMode: true
-    })
-    gitalk.render("gitalk-container")
-</script>
-
 
     </body>
 </html>

@@ -24,7 +24,7 @@
                     `<canvas id="background"><\/canvas>\n<canvas id="fireworks"><\/canvas>\n<script src="/js\/background.js"><\/script>\n<script src="/js\/fireworks.js"><\/script>`
                 );
         </script>
-        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="https://img.gejiba.com/images/c6339d6a6619b36f49abe6151924aa2d.gif"></div></div></div></div></div>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
         <div id="layout">
             <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
             <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
@@ -155,7 +155,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style="color: #ffa2c4">
+                <a href="/tags/Hexo" style="color: #ff7d73">
                     Hexo
                 </a>
             </span>
@@ -167,8 +167,9 @@
         <p>书接上文：<a href="/2022/04/17/hexo-blog-3">Hexo 博客搭建教程 III</a></p>
 <span id="more"></span>
 
-<h2 id="1-配置-SSH-密钥"><a href="#1-配置-SSH-密钥" class="headerlink" title="1. 配置 SSH 密钥"></a>1. 配置 SSH 密钥</h2><p>首先要有一个 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 账号<br><strong><code>&lt;name&gt;</code> 和 <code>&lt;email&gt;</code> 分别是你自己的 Github 用户名和注册时使用的邮箱</strong><br>注册完成后回到主页，点击左边的绿色按钮 New，新建一个项目，名称为<code>&lt;name&gt;.github.io</code>，比如我的用户名是 argvchs，那么名称就是 argvchs.github.io，然后点击 Create repositpory 创建<br>在命令行输入命令 <code>ssh-keygen -t rsa -C &quot;email@email.com&quot;</code>，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了<br>输入命令 <code>notepad %USERPROFILE%\.ssh\id_rsa.pub</code>，打开 SSH 密钥，先不用管，后面会用到<br>打开你 Github 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG keys，点击右上角的 New SSH key，将刚才打开的 SSH 密钥复制到 Key 中，Title 不用写，点击 Add SSH key 添加密钥<br>设置好 SSH 密钥后用 <code>ssh -T git@github.com</code> 检测，如果出现 <code>Hi, xxx! You&#39;ve successfully authenticated</code> 则配置成功</p>
-<h2 id="2-部署到-Github-Pages"><a href="#2-部署到-Github-Pages" class="headerlink" title="2. 部署到 Github Pages"></a>2. 部署到 Github Pages</h2><p>使用下面的命令初始配置</p>
+<h2 id="1-配置-SSH-密钥"><a href="#1-配置-SSH-密钥" class="headerlink" title="1. 配置 SSH 密钥"></a>1. 配置 SSH 密钥</h2><p>首先要有一个 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 账号<br><strong><code>&lt;name&gt;</code> 和 <code>&lt;email&gt;</code> 分别是你自己的 Github 用户名和注册时使用的邮箱</strong><br>注册完成后回到主页，点击左边的绿色按钮 New，新建一个仓库，名称为<code>&lt;name&gt;.github.io</code>，比如我的用户名是 argvchs，那么名称就是 argvchs.github.io，然后点击 Create repositpory 创建<br>在命令行输入命令 <code>ssh-keygen -t rsa -C &quot;email@email.com&quot;</code>，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了<br>输入命令 <code>notepad %USERPROFILE%\.ssh\id_rsa.pub</code>，打开 SSH 密钥，先不用管，后面会用到<br>打开你 Github 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG keys，点击右上角的 New SSH key，将刚才打开的 SSH 密钥复制到 Key 中，Title 不用写，点击 Add SSH key 添加密钥<br>设置好 SSH 密钥后用 <code>ssh -T git@github.com</code> 检测，如果出现 <code>Hi, xxx! You&#39;ve successfully authenticated</code> 则配置成功</p>
+<h2 id="2-更改默认分支（可选）"><a href="#2-更改默认分支（可选）" class="headerlink" title="2. 更改默认分支（可选）"></a>2. 更改默认分支（可选）</h2><p>打开<a target="_blank" rel="noopener" href="https://github.com/settings/repositories">https://github.com/settings/repositories</a>，第一个输入框就是你的默认分支，更改后点击 Update 即可<br>默认分支以前是 <code>master</code>，现在是 <code>main</code>，我觉得还是原来的 <code>master</code> 更好一些，网上搜到关于 Github 的文章，大部分默认分支都是 <code>master</code><br>不更改也可以，但是之后修改_config.yml 的参数时要将 <code>branch: master</code> 改为 <code>branch: main</code></p>
+<h2 id="3-部署到-Github-Pages"><a href="#3-部署到-Github-Pages" class="headerlink" title="3. 部署到 Github Pages"></a>3. 部署到 Github Pages</h2><p>使用下面的命令初始配置</p>
 <pre><code class="bash">git config --global user.name &quot;&lt;name&gt;&quot;
 git config --global user.email &quot;&lt;email&gt;&quot;
 </code></pre>
@@ -185,8 +186,12 @@ deploy:
 <pre><code class="bash">npm i -S hexo-deployer-git
 </code></pre>
 <p>在博客根目录下使用 <code>hexo d -g</code> 部署到 Github Pages</p>
-<h2 id="3-部署到-Vercel-加速访问"><a href="#3-部署到-Vercel-加速访问" class="headerlink" title="3. 部署到 Vercel 加速访问"></a>3. 部署到 Vercel 加速访问</h2><p>先注册一个 <a target="_blank" rel="noopener" href="https://vercel.com/login">Vercel</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 New project，跳转后在 Import Git Repository 中选择你的 Hexo 博客项目，跳转后点击 Deploy 上传到 Vercel<br>上传完成点击 Goto Dashboard 来到项目主页，选择顶部的 Settings，在 Project Name 中更改你网站的名称</p>
-<h2 id="4-部署到-Netlify-加速访问"><a href="#4-部署到-Netlify-加速访问" class="headerlink" title="4. 部署到 Netlify 加速访问"></a>4. 部署到 Netlify 加速访问</h2><p>先注册一个 <a target="_blank" rel="noopener" href="https://app.netlify.com/">Netlify</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 Add new site 中的 Import an existing project，点击 Github，与 Github 关联<br>关联 Github 后在下面会出现你 Github 中的项目，点击你创建的 Hexo 博客项目，再点击 Deploy site 上传<br>上传完成会跳转到项目主页，选择 Site settings，跳转后往下滑，点击 Change site name 更改你网站的名称</p>
+<h2 id="4-部署到-Vercel-或-Netlify-加速访问"><a href="#4-部署到-Vercel-或-Netlify-加速访问" class="headerlink" title="4. 部署到 Vercel 或 Netlify 加速访问"></a>4. 部署到 Vercel 或 Netlify 加速访问</h2><ul>
+<li><p>Vercel<br>先注册一个 <a target="_blank" rel="noopener" href="https://vercel.com/login">Vercel</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 New project，跳转后在 Import Git Repository 中选择你的 Hexo 博客，跳转后点击 Deploy 上传到 Vercel<br>上传完成点击 Goto Dashboard 来到项目主页，选择顶部的 Settings，在 Project Name 中更改你网站的名称</p>
+</li>
+<li><p>Netlify<br>先注册一个 <a target="_blank" rel="noopener" href="https://app.netlify.com/">Netlify</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 Add new site 中的 Import an existing project，点击 Github，与 Github 关联<br>关联 Github 后在下面会出现你 Github 中的仓库，点击你创建的 Hexo 博客，再点击 Deploy site 上传<br>上传完成会跳转到项目主页，选择 Site settings，跳转后往下滑，点击 Change site name 更改你网站的名称</p>
+</li>
+</ul>
 
     </div>
     
@@ -220,20 +225,20 @@ deploy:
                 <img id="img_content" alt="img_show">
             </div>
         </div>
-        <div id="L2dCanvas"></div>
+        <!-- <div id="L2dCanvas"></div> -->
         <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
         <script src="/js/particlex.js"></script>
-        <script src="/js/live2d.min.js"></script>
+        <!-- <script src="/js/live2d.min.js"></script> -->
         <script src="/js/showimg.js"></script>
         <script type="module">
             console.info("Welcome to Argvchs' blog!");
-            var v = new Viewer({
-                width: 240,
-                height: 325,
-                basePath: "/model",
-                role: "dunkeerke_2",
-                mobile: true
-            });
+            // var v = new Viewer({
+            //     width: 240,
+            //     height: 325,
+            //     basePath: "/model",
+            //     role: "dunkeerke_2",
+            //     mobile: true
+            // });
         </script>
         
 <script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>

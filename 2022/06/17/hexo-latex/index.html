@@ -24,7 +24,7 @@
                     `<canvas id="background"><\/canvas>\n<canvas id="fireworks"><\/canvas>\n<script src="/js\/background.js"><\/script>\n<script src="/js\/fireworks.js"><\/script>`
                 );
         </script>
-        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="https://img.gejiba.com/images/c6339d6a6619b36f49abe6151924aa2d.gif"></div></div></div></div></div>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
         <div id="layout">
             <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
             <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
@@ -138,12 +138,68 @@
             2022/6/17
         </span>
         
+        <span class="category">
+            <a href="/categories/教程">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                教程
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Hexo" style="color: #ffa2c4">
+                    Hexo
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/LaTeX" style="color: #00a596">
+                    LaTeX
+                </a>
+            </span>
+            
+        </span>
         
     </div>
     <div class="content" v-pre>
-        <img src="https://latex.codecogs.com/png.image?\dpi{300}D(x)&space;=&space;\begin{cases}\lim\limits_{x&space;\to&space;0}&space;\frac{a^x}{b&plus;c},&space;&&space;x%3C3&space;\\\pi,&space;&&space;x=3&space;\\\int_a^{3b}x_{ij}&plus;e^2&space;\mathrm{d}x,&&space;x%3E3&space;\\\end{cases}" style="max-height:100%; transform-origin: 0% 0%; transform:scale(0.3)">
+        <p><img src="https://cdn-image-argvchs.netlify.app/hexo-latex-test.svg" alt="hexo-latex-test"></p>
+<!--
+\begin{aligned}
+\alpha_0 &= \mathop{\arg\min}_{\alpha_0} f(x^0 - \alpha \nabla f(x^0) )\\
+&=\mathop{\arg\min}_{\alpha_0 \geq 0} (0+(2+2\alpha-3)^2+4(-1-1024\alpha+5)^4)\\
+&=\mathop{\arg\min}_{\alpha_0 \geq 0} \phi(\alpha)
+\end{aligned}
+-->
 
-<h1 id="HAHA"><a href="#HAHA" class="headerlink" title="HAHA"></a>HAHA</h1><span id="more"></span>
+<span id="more"></span>
+
+<h2 id="1-用-Codecogs-编辑-LaTeX"><a href="#1-用-Codecogs-编辑-LaTeX" class="headerlink" title="1. 用 Codecogs 编辑 LaTeX"></a>1. 用 Codecogs 编辑 LaTeX</h2><p>众所周知，Hexo 是不自带 LaTeX 的<br>所以，网上就有一些文章，说要改渲染引擎，要用 MathJax，要改……<br>但是我比较懒，所以就用了 <a target="_blank" rel="noopener" href="https://latex.codecogs.com/">Codecogs</a> 的 LaTeX 渲染引擎，编辑好 LaTeX 公式，在下面选择 SVG，复制链接即可<br>注意复制链接后在 Markdown 文件中要用 <code>&lt;img&gt;</code> 标签，不然 Markdown 解析可能出错</p>
+<h2 id="2-使用图床存储"><a href="#2-使用图床存储" class="headerlink" title="2. 使用图床存储"></a>2. 使用图床存储</h2><p><strong><em>如果 Codecogs 崩了，怎么办？</em></strong></p>
+<p>这种情况我们就要用图床存储<br>而一些常见的图床都不能存储 SVG 图片，我们就需要自建图床 <del>我怎么又不懒了？</del></p>
+<ol>
+<li><p>软件下载<br>下载 <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">PicGo</a>，安装一路确认即可</p>
+</li>
+<li><p>创建 Github 仓库和 Token<br>创建一个仓库，名称随意，用于存储图片<br>Token 在<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">这里</a>创建，点击 Generate new token，Note 随便填，Select-scopes 选中 <code>repo</code> 及子项<br><strong>注意创建完 Token 不要刷新，第二次访问时 Token 就会隐藏！</strong></p>
+</li>
+<li><p>配置 Picgo<br>打开 Picgo，选择 <code>图床设置/Github 图床</code>，配置 Picgo<br>仓库名填 <code>&lt;name&gt;/&lt;repo&gt;</code>，<code>&lt;name&gt;</code> 是你的 Github 用户名，<code>&lt;repo&gt;</code> 是你刚才创建的仓库名<br>分支名填 <code>master</code> 或 <code>main</code>，具体看打开你仓库后左边显示的分支名，Github 的默认分支在<a target="_blank" rel="noopener" href="https://github.com/settings/repositories">这里</a>更改<br>Token 填你刚才 Github 创建的 Token</p>
+</li>
+<li><p>使用 Picgo<br>上传：点击上传区根据提示上传<br>获取链接：点击相册，找到上传的图片，点图片下最左边的按钮复制链接</p>
+</li>
+</ol>
+<h2 id="3-部署到-Netlify-加速访问"><a href="#3-部署到-Netlify-加速访问" class="headerlink" title="3. 部署到 Netlify 加速访问"></a>3. 部署到 Netlify 加速访问</h2><p>先注册一个 <a target="_blank" rel="noopener" href="https://app.netlify.com/">Netlify</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 Add new site 中的 Import an existing project，点击 Github，与 Github 关联<br>关联 Github 后在下面会出现你 Github 中的仓库，点击你创建的图床仓库，再点击 Deploy site 上传<br>上传完成会跳转到项目主页，选择 Site settings，跳转后往下滑，点击 Change site name 更改图床的名称</p>
+<p>之后就可以通过 <code>&lt;name&gt;.netlify.app/&lt;image&gt;</code> 访问图床了，<code>&lt;name&gt;</code>是你 Change site names 时设置的名称，<code>&lt;image&gt;</code>是你上传的图片文件名</p>
+<p>部署到 Netlify 后访问还是很快的，SVG 图像都能约 100ms 的时间加载完成，<strong>但是 PNG&#x2F;JPG 等格式最好还是用网络上常见的图床</strong>，推荐一个 <a target="_blank" rel="noopener" href="https://img.gejiba.com/">https://img.gejiba.com/</a></p>
+<h2 id="4-记录-LaTeX-公式源码"><a href="#4-记录-LaTeX-公式源码" class="headerlink" title="4. 记录 LaTeX 公式源码"></a>4. 记录 LaTeX 公式源码</h2><p><strong><em>如果图床崩了，而你找不到原来的 LaTeX 公式，怎么办？</em></strong></p>
+<p>虽然这种情况不大可能出现，但我们还是要考虑到<br>可以把 LaTeX 公式源码复制在你 Markdown 文件中的图片后面，加上注释，这样图床崩了还能从注释中找到源码</p>
 
     </div>
     
@@ -177,20 +233,20 @@
                 <img id="img_content" alt="img_show">
             </div>
         </div>
-        <div id="L2dCanvas"></div>
+        <!-- <div id="L2dCanvas"></div> -->
         <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
         <script src="/js/particlex.js"></script>
-        <script src="/js/live2d.min.js"></script>
+        <!-- <script src="/js/live2d.min.js"></script> -->
         <script src="/js/showimg.js"></script>
         <script type="module">
             console.info("Welcome to Argvchs' blog!");
-            var v = new Viewer({
-                width: 240,
-                height: 325,
-                basePath: "/model",
-                role: "dunkeerke_2",
-                mobile: true
-            });
+            // var v = new Viewer({
+            //     width: 240,
+            //     height: 325,
+            //     basePath: "/model",
+            //     role: "dunkeerke_2",
+            //     mobile: true
+            // });
         </script>
         
 <script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>

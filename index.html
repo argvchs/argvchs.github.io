@@ -24,7 +24,7 @@
                     `<canvas id="background"><\/canvas>\n<canvas id="fireworks"><\/canvas>\n<script src="/js\/background.js"><\/script>\n<script src="/js\/fireworks.js"><\/script>`
                 );
         </script>
-        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="https://img.gejiba.com/images/c6339d6a6619b36f49abe6151924aa2d.gif"></div></div></div></div></div>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
         <div id="layout">
             <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
             <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
@@ -157,6 +157,14 @@
     </a>
     <div class="category-and-date">
         
+        <span class="category">
+            <a href="/categories/教程">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                教程
+            </a>
+        </span>
+        
         <span class="date">
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
@@ -167,14 +175,37 @@
     <div class="excerpt">
         <div class="content" v-pre>
             
-            <img src="https://latex.codecogs.com/png.image?\dpi{300}D(x)&space;=&space;\begin{cases}\lim\limits_{x&space;\to&space;0}&space;\frac{a^x}{b&plus;c},&space;&&space;x%3C3&space;\\\pi,&space;&&space;x=3&space;\\\int_a^{3b}x_{ij}&plus;e^2&space;\mathrm{d}x,&&space;x%3E3&space;\\\end{cases}" style="max-height:100%; transform-origin: 0% 0%; transform:scale(0.3)">
-
-<h1 id="HAHA"><a href="#HAHA" class="headerlink" title="HAHA"></a>HAHA</h1>
+            <p><img src="https://cdn-image-argvchs.netlify.app/hexo-latex-test.svg" alt="hexo-latex-test"></p>
+<!--
+\begin{aligned}
+\alpha_0 &= \mathop{\arg\min}_{\alpha_0} f(x^0 - \alpha \nabla f(x^0) )\\
+&=\mathop{\arg\min}_{\alpha_0 \geq 0} (0+(2+2\alpha-3)^2+4(-1-1024\alpha+5)^4)\\
+&=\mathop{\arg\min}_{\alpha_0 \geq 0} \phi(\alpha)
+\end{aligned}
+-->
             
         </div>
     </div>
     <div class="post-tags">
         
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Hexo" style="color: #00a596">
+                Hexo
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/LaTeX" style="color: #00bcd4">
+                LaTeX
+            </a>
+        </span>
         
     </div>
     <a href="/2022/06/17/hexo-latex/" class="go-post">
@@ -221,14 +252,14 @@
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style="color: #ff7d73">
+            <a href="/tags/Hexo" style="color: #00a596">
                 Hexo
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/主题" style="color: #ff7d73">
+            <a href="/tags/主题" style="color: #00a596">
                 主题
             </a>
         </span>
@@ -278,7 +309,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style="color: #00a596">
+            <a href="/tags/Hexo" style="color: #ffa2c4">
                 Hexo
             </a>
         </span>
@@ -328,7 +359,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style="color: #03a9f4">
+            <a href="/tags/Hexo" style="color: #ffa2c4">
                 Hexo
             </a>
         </span>
@@ -378,7 +409,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style="color: #ff7d73">
+            <a href="/tags/Hexo" style="color: #00a596">
                 Hexo
             </a>
         </span>
@@ -428,7 +459,7 @@
         
         <span class="tag">
             
-            <a href="/tags/Hexo" style="color: #00a596">
+            <a href="/tags/Hexo" style="color: #03a9f4">
                 Hexo
             </a>
         </span>
@@ -564,20 +595,20 @@
                 <img id="img_content" alt="img_show">
             </div>
         </div>
-        <div id="L2dCanvas"></div>
+        <!-- <div id="L2dCanvas"></div> -->
         <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
         <script src="/js/particlex.js"></script>
-        <script src="/js/live2d.min.js"></script>
+        <!-- <script src="/js/live2d.min.js"></script> -->
         <script src="/js/showimg.js"></script>
         <script type="module">
             console.info("Welcome to Argvchs' blog!");
-            var v = new Viewer({
-                width: 240,
-                height: 325,
-                basePath: "/model",
-                role: "dunkeerke_2",
-                mobile: true
-            });
+            // var v = new Viewer({
+            //     width: 240,
+            //     height: 325,
+            //     basePath: "/model",
+            //     role: "dunkeerke_2",
+            //     mobile: true
+            // });
         </script>
         
 
