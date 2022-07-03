@@ -1,8 +1,8 @@
+https://argvchs.github.io/2022/06/17/hexo-latex/
 https://argvchs.github.io/2022/04/17/hexo-blog-1/
 https://argvchs.github.io/archives/index.html
 https://argvchs.github.io/about/index.html
 https://argvchs.github.io/2022/04/17/hexo-blog-3/
-https://argvchs.github.io/2022/06/17/hexo-latex/
 https://argvchs.github.io/2022/04/17/hexo-blog-2/
 https://argvchs.github.io/2022/04/17/hexo-blog-4/
 https://argvchs.github.io/2022/05/10/hexo-theme-particlex/
