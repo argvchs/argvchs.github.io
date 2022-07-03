@@ -8,7 +8,7 @@
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <link rel="icon" href="https://img.gejiba.com/images/01255817ab999374ffae058dd12b9817.jpg">
+        <link rel="icon" href="https://img1.imgtp.com/2022/07/03/fEKP7deg.jpg">
         <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
         <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
         <link rel="stylesheet" href="/css/fonts.min.css">
@@ -16,7 +16,119 @@
         <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
         <script src="https://cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
         <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-    <meta name="generator" content="Hexo 6.2.0"></head>
+    <meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
     <body>
         <script>
             if (!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
@@ -155,7 +267,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style="color: #ff7d73">
+                <a href="/tags/Hexo" style="color: #03a9f4">
                     Hexo
                 </a>
             </span>
@@ -164,33 +276,71 @@
         
     </div>
     <div class="content" v-pre>
-        <p>书接上文：<a href="/2022/04/17/hexo-blog-3">Hexo 博客搭建教程 III</a></p>
+        <p>书接上文：<a href="/2022/04/17/hexo-blog-3">Hexo 博客搭建教程
+III</a></p>
 <span id="more"></span>
-
-<h2 id="1-配置-SSH-密钥"><a href="#1-配置-SSH-密钥" class="headerlink" title="1. 配置 SSH 密钥"></a>1. 配置 SSH 密钥</h2><p>首先要有一个 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 账号<br><strong><code>&lt;name&gt;</code> 和 <code>&lt;email&gt;</code> 分别是你自己的 Github 用户名和注册时使用的邮箱</strong><br>注册完成后回到主页，点击左边的绿色按钮 New，新建一个仓库，名称为<code>&lt;name&gt;.github.io</code>，比如我的用户名是 argvchs，那么名称就是 argvchs.github.io，然后点击 Create repositpory 创建<br>在命令行输入命令 <code>ssh-keygen -t rsa -C &quot;email@email.com&quot;</code>，获取 SSH 密钥，这个过程会提示你输入一些东西，一直回车就行了<br>输入命令 <code>notepad %USERPROFILE%\.ssh\id_rsa.pub</code>，打开 SSH 密钥，先不用管，后面会用到<br>打开你 Github 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG keys，点击右上角的 New SSH key，将刚才打开的 SSH 密钥复制到 Key 中，Title 不用写，点击 Add SSH key 添加密钥<br>设置好 SSH 密钥后用 <code>ssh -T git@github.com</code> 检测，如果出现 <code>Hi, xxx! You&#39;ve successfully authenticated</code> 则配置成功</p>
-<h2 id="2-更改默认分支（可选）"><a href="#2-更改默认分支（可选）" class="headerlink" title="2. 更改默认分支（可选）"></a>2. 更改默认分支（可选）</h2><p>打开<a target="_blank" rel="noopener" href="https://github.com/settings/repositories">https://github.com/settings/repositories</a>，第一个输入框就是你的默认分支，更改后点击 Update 即可<br>默认分支以前是 <code>master</code>，现在是 <code>main</code>，我觉得还是原来的 <code>master</code> 更好一些，网上搜到关于 Github 的文章，大部分默认分支都是 <code>master</code><br>不更改也可以，但是之后修改_config.yml 的参数时要将 <code>branch: master</code> 改为 <code>branch: main</code></p>
-<h2 id="3-部署到-Github-Pages"><a href="#3-部署到-Github-Pages" class="headerlink" title="3. 部署到 Github Pages"></a>3. 部署到 Github Pages</h2><p>使用下面的命令初始配置</p>
-<pre><code class="bash">git config --global user.name &quot;&lt;name&gt;&quot;
-git config --global user.email &quot;&lt;email&gt;&quot;
-</code></pre>
-<p>打开你博客根目录的_config.yml，设置参数</p>
-<pre><code class="yaml">url: https://&lt;name&gt;.github.io/
-# ...
-deploy:
-    type: git
-    repo: git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git
-    branch: master
-    message:
-</code></pre>
-<p>设置好参数，使用下面的命令安装部署插件，安装了才能部署到 Github Pages</p>
-<pre><code class="bash">npm i -S hexo-deployer-git
-</code></pre>
+<h2 id="配置-ssh-密钥">1. 配置 SSH 密钥</h2>
+<p>首先要有一个 <a target="_blank" rel="noopener" href="https://github.com">Github</a> 账号<br>
+<strong><code>&lt;name&gt;</code> 和 <code>&lt;email&gt;</code>
+分别是你自己的 Github 用户名和注册时使用的邮箱</strong><br>
+注册完成后回到主页，点击左边的绿色按钮
+New，新建一个仓库，名称为<code>&lt;name&gt;.github.io</code>，比如我的用户名是
+argvchs，那么名称就是 argvchs.github.io，然后点击 Create repositpory
+创建<br>
+在命令行输入命令
+<code>ssh-keygen -t rsa -C "email@email.com"</code>，获取 SSH
+密钥，这个过程会提示你输入一些东西，一直回车就行了<br>
+输入命令 <code>notepad %USERPROFILE%\.ssh\id_rsa.pub</code>，打开 SSH
+密钥，先不用管，后面会用到<br>
+打开你 Github 右上角的头像中的 Settings 设置，点击左边的 SSH and GPG
+keys，点击右上角的 New SSH key，将刚才打开的 SSH 密钥复制到 Key
+中，Title 不用写，点击 Add SSH key 添加密钥<br>
+设置好 SSH 密钥后用 <code>ssh -T git@github.com</code> 检测，如果出现
+<code>Hi, xxx! You've successfully authenticated</code> 则配置成功</p>
+<h2 id="更改默认分支可选">2. 更改默认分支（可选）</h2>
+<p>打开<a target="_blank" rel="noopener" href="https://github.com/settings/repositories" class="uri">https://github.com/settings/repositories</a>，第一个输入框就是你的默认分支，更改后点击
+Update 即可<br>
+默认分支以前是 <code>master</code>，现在是
+<code>main</code>，我觉得还是原来的 <code>master</code>
+更好一些，网上搜到关于 Github 的文章，大部分默认分支都是
+<code>master</code><br>
+不更改也可以，但是之后修改 <code>_config.yml</code> 的参数时要将
+<code>branch: master</code> 改为 <code>branch: main</code></p>
+<h2 id="部署到-github-pages">3. 部署到 Github Pages</h2>
+<p>使用下面的命令初始配置</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"&lt;name&gt;"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"&lt;email&gt;"</span></span></code></pre></div>
+<p>打开你博客根目录的 <code>_config.yml</code>，设置参数</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span><span class="kw">:</span><span class="at"> https://&lt;name&gt;.github.io/</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">deploy</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> git</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">repo</span><span class="kw">:</span><span class="at"> git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branch</span><span class="kw">:</span><span class="at"> master</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">message</span><span class="kw">:</span></span></code></pre></div>
+<p>设置好参数，使用下面的命令安装部署插件，安装了才能部署到 Github
+Pages</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> i <span class="at">-S</span> hexo-deployer-git</span></code></pre></div>
 <p>在博客根目录下使用 <code>hexo d -g</code> 部署到 Github Pages</p>
-<h2 id="4-部署到-Vercel-或-Netlify-加速访问"><a href="#4-部署到-Vercel-或-Netlify-加速访问" class="headerlink" title="4. 部署到 Vercel 或 Netlify 加速访问"></a>4. 部署到 Vercel 或 Netlify 加速访问</h2><ul>
-<li><p>Vercel<br>先注册一个 <a target="_blank" rel="noopener" href="https://vercel.com/login">Vercel</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 New project，跳转后在 Import Git Repository 中选择你的 Hexo 博客，跳转后点击 Deploy 上传到 Vercel<br>上传完成点击 Goto Dashboard 来到项目主页，选择顶部的 Settings，在 Project Name 中更改你网站的名称</p>
-</li>
-<li><p>Netlify<br>先注册一个 <a target="_blank" rel="noopener" href="https://app.netlify.com/">Netlify</a> 账号，通过 Github 注册<br>注册成功后跳转到你的首页，点击 Add new site 中的 Import an existing project，点击 Github，与 Github 关联<br>关联 Github 后在下面会出现你 Github 中的仓库，点击你创建的 Hexo 博客，再点击 Deploy site 上传<br>上传完成会跳转到项目主页，选择 Site settings，跳转后往下滑，点击 Change site name 更改你网站的名称</p>
-</li>
+<h2 id="部署到-vercel-或-netlify-加速访问">4. 部署到 Vercel 或 Netlify
+加速访问</h2>
+<ul>
+<li><p>Vercel<br>
+先注册一个 <a target="_blank" rel="noopener" href="https://vercel.com/login">Vercel</a> 账号，通过
+Github 注册<br>
+注册成功后跳转到你的首页，点击 New project，跳转后在 Import Git
+Repository 中选择你的 Hexo 博客，跳转后点击 Deploy 上传到 Vercel<br>
+上传完成点击 Goto Dashboard 来到项目主页，选择顶部的 Settings，在
+Project Name 中更改你网站的名称</p></li>
+<li><p>Netlify<br>
+先注册一个 <a target="_blank" rel="noopener" href="https://app.netlify.com/">Netlify</a> 账号，通过
+Github 注册<br>
+注册成功后跳转到你的首页，点击 Add new site 中的 Import an existing
+project，点击 Github，与 Github 关联<br>
+关联 Github 后在下面会出现你 Github 中的仓库，点击你创建的 Hexo
+博客，再点击 Deploy site 上传<br>
+上传完成会跳转到项目主页，选择 Site settings，跳转后往下滑，点击 Change
+site name 更改你网站的名称</p></li>
 </ul>
 
     </div>

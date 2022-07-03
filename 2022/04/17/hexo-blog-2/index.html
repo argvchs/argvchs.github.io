@@ -8,7 +8,7 @@
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <link rel="icon" href="https://img.gejiba.com/images/01255817ab999374ffae058dd12b9817.jpg">
+        <link rel="icon" href="https://img1.imgtp.com/2022/07/03/fEKP7deg.jpg">
         <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
         <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
         <link rel="stylesheet" href="/css/fonts.min.css">
@@ -16,7 +16,119 @@
         <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
         <script src="https://cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
         <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-    <meta name="generator" content="Hexo 6.2.0"></head>
+    <meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
     <body>
         <script>
             if (!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
@@ -155,7 +267,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style="color: #ffa2c4">
+                <a href="/tags/Hexo" style="color: #00a596">
                     Hexo
                 </a>
             </span>
@@ -164,56 +276,79 @@
         
     </div>
     <div class="content" v-pre>
-        <p>书接上文：<a href="/2022/04/17/hexo-blog-1">Hexo 博客搭建教程 I</a></p>
+        <p>书接上文：<a href="/2022/04/17/hexo-blog-1">Hexo 博客搭建教程
+I</a></p>
 <span id="more"></span>
-
-<h2 id="1-安装主题"><a href="#1-安装主题" class="headerlink" title="1. 安装主题"></a>1. 安装主题</h2><p>首先在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a>选择一个主题<br>上面的图片是预览页，下面的蓝色链接是 Github 项目页<br>选好主题后就要安装，在博客根目录下运行下面的命令将主题 Clone 到本地<br><strong><code>&lt;theme-dir&gt;</code> 为主题链接，<code>&lt;theme-name&gt;</code> 为主题名称</strong></p>
-<pre><code class="bash">git clone &lt;theme-dir&gt;.git themes\&lt;theme-name&gt;
-</code></pre>
-<p><del>什么？Github 打不开？这只能怪你不会<a target="_blank" rel="noopener" href="https://gitlab.com/getlantern/lantern-binaries-mirror" download>珂学上网</a></del><br>比如我的主题是 <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX</a>，就是 <code>git clone https://github.com/argvchs/hexo-theme-particlex.git themes\particlex</code><br>安装完成后，在博客根目录下的 _config.yml 中设置 theme 参数为你的主题名称，就可以切换主题，一般主题在 Github 项目页下都会有介绍和配置说明，可以按照说明自定义页面，这里我就不细说了</p>
-<h2 id="2-创建关于页和文章分类"><a href="#2-创建关于页和文章分类" class="headerlink" title="2. 创建关于页和文章分类"></a>2. 创建关于页和文章分类</h2><ul>
-<li>Categories&#x2F;Tags 文章分类<br><strong><code>&lt;root&gt;</code> 为你博客的根目录</strong><br>输入命令 <code>hexo new page categories</code> 创建 Categories 页面，打开<code>&lt;root&gt;\source\categories</code>下的 index.md 文件，在文章前添加 type 参数值为 <code>&quot;categories&quot;</code><br>输入命令 <code>hexo new page tags</code> 创建 Tags 页面，打开<code>&lt;root&gt;\source\tags</code>下的 index.md 文件，在文章前添加 type 参数值为 <code>&quot;tags&quot;</code></li>
-<li>About 关于页<br>先按照创建文章分类的方法，创建 About 页面，然后在下面添加内容即可</li>
+<h2 id="安装主题">1. 安装主题</h2>
+<p>首先在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a>选择一个主题<br>
+上面的图片是预览页，下面的蓝色链接是 Github 项目页<br>
+选好主题后就要安装，在博客根目录下运行下面的命令将主题 Clone
+到本地<br>
+<strong><code>&lt;theme-dir&gt;</code>
+为主题链接，<code>&lt;theme-name&gt;</code> 为主题名称</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>theme-dir<span class="op">&gt;</span>.git themes<span class="dt">\&lt;</span>theme-name<span class="op">&gt;</span></span></code></pre></div>
+<p><del>什么？Github
+打不开？这只能怪你不会<a target="_blank" rel="noopener" href="https://gitlab.com/getlantern/lantern-binaries-mirror" download="">珂学上网</a></del><br>
+比如我的主题是 <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX</a>，就是
+<code>git clone https://github.com/argvchs/hexo-theme-particlex.git themes\particlex</code><br>
+安装完成后，在博客根目录下的 <code>_config.yml</code> 中设置 theme
+参数为你的主题名称，就可以切换主题，一般主题在 Github
+项目页下都会有介绍和配置说明，可以按照说明自定义页面，这里我就不细说了</p>
+<h2 id="创建关于页和文章分类">2. 创建关于页和文章分类</h2>
+<ul>
+<li>Categories/Tags 文章分类<br>
+<strong><code>&lt;root&gt;</code> 为你博客的根目录</strong><br>
+输入命令 <code>hexo new page categories</code> 创建 Categories
+页面，打开<code>&lt;root&gt;\source\categories</code>下的 index.md
+文件，在文章前添加 type 参数值为 <code>"categories"</code><br>
+输入命令 <code>hexo new page tags</code> 创建 Tags
+页面，打开<code>&lt;root&gt;\source\tags</code>下的 index.md
+文件，在文章前添加 type 参数值为 <code>"tags"</code></li>
+<li>About 关于页<br>
+先按照创建文章分类的方法，创建 About 页面，然后在下面添加内容即可</li>
 </ul>
-<h2 id="3-自定义网站配置"><a href="#3-自定义网站配置" class="headerlink" title="3. 自定义网站配置"></a>3. 自定义网站配置</h2><p>打开博客根目录下的 _config.yml，下面是主要参数的介绍</p>
-<pre><code class="yaml">title: # 标题
-subtitle: # 副标题
-description: # 描述
-keywords: # 关键字
-author: # 作者
-language: # 语言
-timezone: # 时区
-url: # 网址
-root: # 根目录
-permalink: # 文章链接格式
-permalink_defaults: # 链接默认值
-source_dir: # 源文件夹，内容的存储位置
-public_dir: # 公用文件夹，静态文件的生成位置
-tag_dir: # 标签目录
-archive_dir: # 存档目录
-category_dir: # 分类目录
-skip_render: # 复制到原始路径，不进行渲染
-new_post_name: # 新帖子的文件名格式
-titlecase: # 将标题转换为小写1/大写2 *
-external_link.enable: # 在新标签页中打开外部链接
-post_asset_folder: # 启用资源文件夹功能
-filename_case: # 将文件名转换小写小写1/大写2
-relative_link: # 是否创建相对于根文件夹的链接
-index_generator.per_page: # 每页显示的文章数
-index_generator.order_by: # 发布顺序
-date_format: # 日期格式
-time_format: # 时间格式
-per_page: # 每个页面上显示的文章数
-pagination_dir: # 网址格式
-theme: # 主题名称
-theme_config: # 主题配置，覆盖主题默认值
-deploy: # 部署设置
-include: # 包括隐藏文件
-exclude: # 排除文件/文件夹
-ignore: # 忽略文件/文件夹
-</code></pre>
-<p>由于参数过多，只写了一部分，其他可以参考<a target="_blank" rel="noopener" href="https://hexo.io/docs/configuration">Hexo 官方文档</a><br><strong>P.S.：titlecase 参数改变后部分主题可能检测不到 Categories 和 Tags 页面</strong></p>
-<p>下一篇：<a href="/2022/04/17/hexo-blog-3">Hexo 博客搭建教程 III</a></p>
+<h2 id="自定义网站配置">3. 自定义网站配置</h2>
+<p>打开博客根目录下的 <code>_config.yml</code>，下面是主要参数的介绍</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="co"> # 标题</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="co"> # 副标题</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="co"> # 描述</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">keywords</span><span class="kw">:</span><span class="co"> # 关键字</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="co"> # 作者</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span><span class="co"> # 语言</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">timezone</span><span class="kw">:</span><span class="co"> # 时区</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span><span class="kw">:</span><span class="co"> # 网址</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">root</span><span class="kw">:</span><span class="co"> # 根目录</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">permalink</span><span class="kw">:</span><span class="co"> # 文章链接格式</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">permalink_defaults</span><span class="kw">:</span><span class="co"> # 链接默认值</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">source_dir</span><span class="kw">:</span><span class="co"> # 源文件夹，内容的存储位置</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">public_dir</span><span class="kw">:</span><span class="co"> # 公用文件夹，静态文件的生成位置</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tag_dir</span><span class="kw">:</span><span class="co"> # 标签目录</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">archive_dir</span><span class="kw">:</span><span class="co"> # 存档目录</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">category_dir</span><span class="kw">:</span><span class="co"> # 分类目录</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">skip_render</span><span class="kw">:</span><span class="co"> # 复制到原始路径，不进行渲染</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">new_post_name</span><span class="kw">:</span><span class="co"> # 新帖子的文件名格式</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">titlecase</span><span class="kw">:</span><span class="co"> # 将标题转换为小写1/大写2 *</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">external_link.enable</span><span class="kw">:</span><span class="co"> # 在新标签页中打开外部链接</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">post_asset_folder</span><span class="kw">:</span><span class="co"> # 启用资源文件夹功能</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">filename_case</span><span class="kw">:</span><span class="co"> # 将文件名转换小写小写1/大写2</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">relative_link</span><span class="kw">:</span><span class="co"> # 是否创建相对于根文件夹的链接</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">index_generator.per_page</span><span class="kw">:</span><span class="co"> # 每页显示的文章数</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">index_generator.order_by</span><span class="kw">:</span><span class="co"> # 发布顺序</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">date_format</span><span class="kw">:</span><span class="co"> # 日期格式</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">time_format</span><span class="kw">:</span><span class="co"> # 时间格式</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">per_page</span><span class="kw">:</span><span class="co"> # 每个页面上显示的文章数</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">pagination_dir</span><span class="kw">:</span><span class="co"> # 网址格式</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span><span class="kw">:</span><span class="co"> # 主题名称</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_config</span><span class="kw">:</span><span class="co"> # 主题配置，覆盖主题默认值</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">deploy</span><span class="kw">:</span><span class="co"> # 部署设置</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">include</span><span class="kw">:</span><span class="co"> # 包括隐藏文件</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="fu">exclude</span><span class="kw">:</span><span class="co"> # 排除文件/文件夹</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="fu">ignore</span><span class="kw">:</span><span class="co"> # 忽略文件/文件夹</span></span></code></pre></div>
+<p>由于参数过多，只写了一部分，其他可以参考<a target="_blank" rel="noopener" href="https://hexo.io/docs/configuration">Hexo 官方文档</a><br>
+<strong>P.S.：titlecase 参数改变后部分主题可能检测不到 Categories 和
+Tags 页面</strong></p>
+<p>下一篇：<a href="/2022/04/17/hexo-blog-3">Hexo 博客搭建教程
+III</a></p>
 
     </div>
     

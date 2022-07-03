@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-1/</loc>
+    
+    <lastmod>2022-07-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://argvchs.github.io/archives/index.html</loc>
+    
+    <lastmod>2022-07-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://argvchs.github.io/about/index.html</loc>
+    
+    <lastmod>2022-07-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://argvchs.github.io/2022/04/17/hexo-blog-3/</loc>
     
     <lastmod>2022-07-03</lastmod>
@@ -20,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-4/</loc>
+    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-2/</loc>
     
     <lastmod>2022-07-03</lastmod>
     
@@ -29,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-1/</loc>
+    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-4/</loc>
     
     <lastmod>2022-07-03</lastmod>
     
@@ -41,24 +68,6 @@
     <loc>https://argvchs.github.io/2022/05/10/hexo-theme-particlex/</loc>
     
     <lastmod>2022-05-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://argvchs.github.io/2022/04/17/hexo-blog-2/</loc>
-    
-    <lastmod>2022-05-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://argvchs.github.io/about/index.html</loc>
-    
-    <lastmod>2022-04-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

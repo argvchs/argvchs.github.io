@@ -8,7 +8,7 @@
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <link rel="icon" href="https://img.gejiba.com/images/01255817ab999374ffae058dd12b9817.jpg">
+        <link rel="icon" href="https://img1.imgtp.com/2022/07/03/fEKP7deg.jpg">
         <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
         <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
         <link rel="stylesheet" href="/css/fonts.min.css">
@@ -16,7 +16,119 @@
         <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
         <script src="https://cdn.staticfile.org/pixi.js/4.6.1/pixi.min.js"></script>
         <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-    <meta name="generator" content="Hexo 6.2.0"></head>
+    <meta name="generator" content="Hexo 6.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
     <body>
         <script>
             if (!navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
@@ -155,7 +267,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style="color: #00a596">
+                <a href="/tags/Hexo" style="color: #ffa2c4">
                     Hexo
                 </a>
             </span>
@@ -164,94 +276,104 @@
         
     </div>
     <div class="content" v-pre>
-        <p>书接上文：<a href="/2022/04/17/hexo-blog-2">Hexo 博客搭建教程 II</a></p>
+        <p>书接上文：<a href="/2022/04/17/hexo-blog-2">Hexo 博客搭建教程
+II</a></p>
 <span id="more"></span>
-
-<h2 id="1-目录介绍"><a href="#1-目录介绍" class="headerlink" title="1. 目录介绍"></a>1. 目录介绍</h2><p>介绍一下博客根目录各文件夹&#x2F;文件的作用，我的主题用的是 EJS，其他如 Pug&#x2F;Jade 等相差太大的模板引擎请不要参考本篇<del>（我太懒了）</del></p>
-<pre><code class="plain">&lt;root&gt;
+<h2 id="目录介绍">1. 目录介绍</h2>
+<p>介绍一下博客根目录各文件夹/文件的作用，我的主题用的是 EJS，其他如
+Pug/Jade 等相差太大的模板引擎请不要参考本篇<del>（我太懒了）</del></p>
+<pre class="plain"><code>&lt;root&gt;
 |---public # 静态网页文件
 |---source # 文章（不要和主题文件夹下的source弄混）
 |---themes # 主题
     |---&lt;theme-name&gt;
         |---layout # 布局文件
         |   |---layout.ejs # 网页的基本布局
-        |---source # 主题资源文件，里面的内容会生成到静态文件下
-</code></pre>
-<h2 id="2-添加自定义-JS-x2F-CSS"><a href="#2-添加自定义-JS-x2F-CSS" class="headerlink" title="2. 添加自定义 JS&#x2F;CSS"></a>2. 添加自定义 JS&#x2F;CSS</h2><p>在 <code>&lt;root&gt;\themes\&lt;theme-name&gt;\source</code> 下添加自定义文件（最好把文件放在 js、css…文件夹下分类，不然生成的静态文件会很乱），然后在 layout.ejs 下添加如下内容，如果使用网络上的文件直接在 src&#x2F;href 中填写路径即可<br><strong>&lt;file-name&gt;为自定义文件名称</strong></p>
-<pre><code class="html">&lt;!--JS--&gt;
-&lt;script src=&quot;/&lt;file-name&gt;&quot;&gt;&lt;/script&gt;
-&lt;!--CSS--&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/&lt;file-name&gt;&quot; /&gt;
-</code></pre>
-<h2 id="3-我用的自定义文件"><a href="#3-我用的自定义文件" class="headerlink" title="3. 我用的自定义文件"></a>3. 我用的自定义文件</h2><p>live2d.min.js：Live2D 组件，需要前置 PIXI.js （很卡，已停用）</p>
+        |---source # 主题资源文件，里面的内容会生成到静态文件下</code></pre>
+<h2 id="添加自定义-jscss">2. 添加自定义 JS/CSS</h2>
+<p>在 <code>&lt;root&gt;\themes\&lt;theme-name&gt;\source</code>
+下添加自定义文件（最好把文件放在
+js、css...文件夹下分类，不然生成的静态文件会很乱），然后在 layout.ejs
+下添加如下内容，如果使用网络上的文件直接在 src/href 中填写路径即可<br>
+<strong>&lt;file-name&gt;为自定义文件名称</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--JS--&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"/</span><span class="er">&lt;</span><span class="st">file-name&gt;"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--CSS--&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"/</span><span class="er">&lt;</span><span class="st">file-name&gt;"</span> <span class="kw">/&gt;</span></span></code></pre></div>
+<h2 id="我用的自定义文件">3. 我用的自定义文件</h2>
+<p>live2d.min.js：Live2D 组件，需要前置 PIXI.js （很卡，已停用）</p>
 <ul>
-<li><p>使用：将<a target="_blank" rel="noopener" href="https://github.com/imuncle/live2d">这里</a>的 Live2D 模型 Clone 到本地，选择一个喜<font color="red">❤</font>欢的模型（必须是 Cubism3 版本的，在 <code>live2d_3</code> 文件夹下）复制到<code>&lt;root&gt;\themes\&lt;theme-name&gt;\source\model</code><br><strong>&lt;model-name&gt;为模型名称，参数和我给的 CSS 样式可以更改，以下是我的配置</strong></p>
-<pre><code class="html">&lt;div id=&quot;L2dCanvas&quot;&gt;&lt;/div&gt;
-&lt;script src=&quot;/js/live2d.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;/css/live2d.css&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-    var v = new Viewer(&#123;
-        width: 240,
-        height: 325,
-        right: &quot;0&quot;,
-        bottom: &quot;0&quot;,
-        basePath: &quot;/model&quot;,
-        role: &quot;&lt;model-name&gt;&quot;,
-        mobile: true,
-    &#125;);
-&lt;/script&gt;
-</code></pre>
-</li>
+<li><p>使用：将<a target="_blank" rel="noopener" href="https://github.com/imuncle/live2d">这里</a>的
+Live2D 模型 Clone 到本地，选择一个喜<font color="red"><span class="emoji" data-emoji="heart">❤️</span></font>欢的模型（必须是
+Cubism3 版本的，在 <code>live2d_3</code>
+文件夹下）复制到<code>&lt;root&gt;\themes\&lt;theme-name&gt;\source\model</code><br>
+<strong>&lt;model-name&gt;为模型名称，参数和我给的 CSS
+样式可以更改，以下是我的配置</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">"L2dCanvas"</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"/js/live2d.min.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"/css/live2d.css"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">var</span> v <span class="op">=</span> <span class="kw">new</span> <span class="fu">Viewer</span>({</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">width</span><span class="op">:</span> <span class="dv">240</span><span class="op">,</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="dt">height</span><span class="op">:</span> <span class="dv">325</span><span class="op">,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">right</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">bottom</span><span class="op">:</span> <span class="st">"0"</span><span class="op">,</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">basePath</span><span class="op">:</span> <span class="st">"/model"</span><span class="op">,</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">role</span><span class="op">:</span> <span class="st">"&lt;model-name&gt;"</span><span class="op">,</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">mobile</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div></li>
 <li><p>下载：</p>
 <ul>
 <li><a href="/js/live2d.min.js">live2d.min.js</a></li>
 <li><a href="/assets/live2d.css">live2d.css</a></li>
-<li><a href="/assets/model.zip">live2d.zip</a>（我用的 Live2d 模型）</li>
-</ul>
-</li>
+<li><a href="/assets/model.zip">live2d.zip</a>（我用的 Live2d
+模型）</li>
+</ul></li>
 </ul>
 <p>fireworks.js：鼠标点击特效，需要前置 Anime.js</p>
 <ul>
-<li>使用：<pre><code class="html">&lt;canvas
-    id=&quot;fireworks&quot;
-    style=&quot;position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:2147483647&quot;
-&gt;&lt;/canvas&gt;
-&lt;script src=&quot;/js/fireworks.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-</li>
+<li>使用：<br>
+<code>html     &lt;canvas         id="fireworks"         style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:2147483647"     &gt;&lt;/canvas&gt;     &lt;script src="/js/fireworks.js"&gt;&lt;/script&gt;</code></li>
 <li>下载：<a href="/js/fireworks.js">fireworks.js</a></li>
 </ul>
 <p>background.js：流星背景特效</p>
 <ul>
-<li>使用：<pre><code class="html">&lt;canvas
-    id=&quot;background&quot;
-    style=&quot;position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1&quot;
-&gt;&lt;/canvas&gt;
-&lt;script src=&quot;/js/background.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-</li>
+<li>使用：<br>
+<code>html     &lt;canvas         id="background"         style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"     &gt;&lt;/canvas&gt;     &lt;script src="/js/background.js"&gt;&lt;/script&gt;</code></li>
 <li>下载：<a href="/js/background.js">background.js</a></li>
 </ul>
-<h2 id="4-Hexo-Markdown-语法补充"><a href="#4-Hexo-Markdown-语法补充" class="headerlink" title="4. Hexo Markdown 语法补充"></a>4. Hexo Markdown 语法补充</h2><p>Markdown 是支持渲染 HTML 的，所以可以实现各种效果<br>如果你要不使 HTML 标签被渲染可以在右边的小于号加 <code>\</code> 转义，如 <code>&lt;tag\&gt;</code>，但还是推荐<code>`tag`</code>的代码格式</p>
+<h2 id="hexo-markdown-语法补充">4. Hexo Markdown 语法补充</h2>
+<p>Markdown 是支持渲染 HTML 的，所以可以实现各种效果<br>
+如果你要不使 HTML 标签被渲染可以在右边的小于号加 <code>\</code> 转义，如
+<code>&lt;tag\&gt;</code>，但还是推荐<code>`tag`</code>的代码格式</p>
 <ul>
-<li><p>字体<br>用 <code>&lt;font&gt;</code> 来实现字体的样式修改<br><strong><code>&lt;color&gt;</code> <code>&lt;size&gt;</code> <code>&lt;face&gt;</code> 分别是你字体的颜色，大小和字体名称</strong></p>
-<pre><code class="markdown">&lt;font color=&lt;color&gt; size=&lt;size&gt; face=&lt;face&gt;&gt;Text...&lt;/font&gt;
-</code></pre>
-</li>
-<li><p>下载文件<br>Markdown 下载文件，网上搜到的都是 post_asset_folder 这个参数<del>（也不知道为什么我不能用）</del><br>只要把文件放到<code>&lt;root&gt;\theme\&lt;theme-name&gt;\source</code> 下（同样，最好分类一下），在 Markdown 中引用就行<br>部分文件可能不会下载，在浏览器打开，如果有洁癖可以用第二种方法<br><strong>&lt;file-name&gt;为文件名</strong></p>
-<pre><code class="markdown">[Description...](/file-name)
-&lt;a href=&quot;&lt;file-name&gt;&quot; download&gt;Description...&lt;/a&gt;
-</code></pre>
-</li>
-<li><p>注释<br>Markdown 注释和 HTML 一样</p>
-<pre><code class="markdown">&lt;!-- Comment... --&gt;
-</code></pre>
-<p>特别的，用 <code>&lt;!-- more --&gt;</code> 可以控制主页预览内容，后面的内容在显示全文时才出现</p>
-</li>
-<li><p>解决部分主题没有块引用的样式<br>块引用会解析成 <code>&lt;blockquote&gt;</code> 标签，添加自定义 CSS 即可</p>
-</li>
+<li><p>字体<br>
+用 <code>&lt;font&gt;</code> 来实现字体的样式修改<br>
+<strong><code>&lt;color&gt;</code> <code>&lt;size&gt;</code>
+<code>&lt;face&gt;</code>
+分别是你字体的颜色，大小和字体名称</strong><br>
+<code>markdown     &lt;font color=&lt;color&gt; size=&lt;size&gt; face=&lt;face&gt;&gt;Text...&lt;/font&gt;</code></p></li>
+<li><p>下载文件<br>
+Markdown 下载文件，网上搜到的都是 post_asset_folder
+这个参数<del>（也不知道为什么我不能用）</del><br>
+只要把文件放到<code>&lt;root&gt;\theme\&lt;theme-name&gt;\source</code>
+下（同样，最好分类一下），在 Markdown 中引用就行<br>
+部分文件可能不会下载，在浏览器打开，如果有洁癖可以用第二种方法<br>
+<strong>&lt;file-name&gt;为文件名</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Description...</span><span class="co">](/file-name)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"</span><span class="er">&lt;</span><span class="st">file-name&gt;"</span> <span class="er">download</span><span class="kw">&gt;</span>Description...<span class="kw">&lt;/a&gt;</span></span></code></pre></div></li>
+<li><p>注释<br>
+Markdown 注释和 HTML 一样</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Comment... --&gt;</span></span></code></pre></div>
+<p>特别的，用 <code>&lt;!-- more --&gt;</code>
+可以控制主页预览内容，后面的内容在显示全文时才出现</p></li>
+<li><p>解决部分主题没有块引用的样式<br>
+块引用会解析成 <code>&lt;blockquote&gt;</code> 标签，添加自定义 CSS
+即可</p></li>
 </ul>
-<p>下一篇：<a href="/2022/04/17/hexo-blog-4">Hexo 博客搭建教程 IV</a></p>
+<p>下一篇：<a href="/2022/04/17/hexo-blog-4">Hexo 博客搭建教程
+IV</a></p>
 
     </div>
     
