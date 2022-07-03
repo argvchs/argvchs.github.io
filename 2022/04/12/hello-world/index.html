@@ -330,7 +330,8 @@ mjx-container[display="true"] + br {
         admin: ["argvchs"],
         language: "zh-CN",
         id: location.pathname,
-        distractionFreeMode: true
+        distractionFreeMode: true,
+        proxy: "https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token"
     })
     gitalk.render("gitalk-container")
 </script>

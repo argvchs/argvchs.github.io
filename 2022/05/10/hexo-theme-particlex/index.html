@@ -267,7 +267,7 @@ mjx-container[display="true"] + br {
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style="color: #03a9f4">
+                <a href="/tags/Hexo" style="color: #ffa2c4">
                     Hexo
                 </a>
             </span>
@@ -483,7 +483,8 @@ Oauth APP<br>
         admin: ["argvchs"],
         language: "zh-CN",
         id: location.pathname,
-        distractionFreeMode: true
+        distractionFreeMode: true,
+        proxy: "https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token"
     })
     gitalk.render("gitalk-container")
 </script>
