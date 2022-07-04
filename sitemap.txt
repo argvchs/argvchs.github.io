@@ -11,7 +11,7 @@ https://argvchs.github.io/2022/04/12/hello-world/
 https://argvchs.github.io/tags/index.html
 https://argvchs.github.io/
 https://argvchs.github.io/tags/Hexo/
-https://argvchs.github.io/tags/LaTeX/
 https://argvchs.github.io/tags/%E4%B8%BB%E9%A2%98/
+https://argvchs.github.io/tags/LaTeX/
 https://argvchs.github.io/categories/%E6%95%99%E7%A8%8B/
 https://argvchs.github.io/categories/%E5%B7%A5%E5%85%B7/
