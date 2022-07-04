@@ -267,14 +267,14 @@ mjx-container[display="true"] + br {
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style="color: #ffa2c4">
+                <a href="/tags/Hexo" style="color: #00a596">
                     Hexo
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/主题" style="color: #03a9f4">
+                <a href="/tags/主题" style="color: #ff7d73">
                     主题
                 </a>
             </span>
@@ -399,11 +399,12 @@ Oauth APP<br>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">owner</span><span class="kw">:</span><span class="co"> # GitHub repo owner</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">admin</span><span class="kw">:</span><span class="co"> # GitHub repo owner and collaborators, only these guys can initialize github issues</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">language</span><span class="kw">:</span><span class="at"> zh-CN</span><span class="co"> # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sites</span><span class="kw">:</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">        # Example:</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">        # &lt;www.example.com&gt;:</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">        #    clientID: &lt;client-id&gt;</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">        #    clientSecret: &lt;client-secret&gt;</span></span></code></pre></div></li>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">proxy</span><span class="kw">:</span><span class="co"> # CORS proxy without "http:" or "https:"</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sites</span><span class="kw">:</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">        # Example:</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">        # &lt;www.example.com&gt;:</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">        #    clientID: &lt;client-id&gt;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">        #    clientSecret: &lt;client-secret&gt;</span></span></code></pre></div></li>
 </ul>
 <h2 id="写在最后">写在最后</h2>
 <p>本项目采用 MIT 开源许可证，欢迎大家贡献，你可以随意打开一个 Issue
@@ -484,7 +485,10 @@ Oauth APP<br>
         admin: ["argvchs"],
         language: "zh-CN",
         id: location.pathname,
-        distractionFreeMode: false
+        distractionFreeMode: false,
+        
+        proxy: "https://cors-anywhere.argvchs.workers.dev/https://github.com/login/oauth/access_token"
+        
     })
     gitalk.render("gitalk-container")
 </script>

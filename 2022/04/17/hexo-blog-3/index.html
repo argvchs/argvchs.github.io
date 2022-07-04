@@ -450,7 +450,10 @@ IV</a></p>
         admin: ["argvchs"],
         language: "zh-CN",
         id: location.pathname,
-        distractionFreeMode: false
+        distractionFreeMode: false,
+        
+        proxy: "https://cors-anywhere.argvchs.workers.dev/https://github.com/login/oauth/access_token"
+        
     })
     gitalk.render("gitalk-container")
 </script>

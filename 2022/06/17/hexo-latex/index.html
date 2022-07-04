@@ -274,7 +274,7 @@ mjx-container[display="true"] + br {
             
             <span class="tag">
                 
-                <a href="/tags/LaTeX" style="color: #03a9f4">
+                <a href="/tags/LaTeX" style="color: #00a596">
                     LaTeX
                 </a>
             </span>
@@ -400,7 +400,10 @@ LaTeX<br>
         admin: ["argvchs"],
         language: "zh-CN",
         id: location.pathname,
-        distractionFreeMode: false
+        distractionFreeMode: false,
+        
+        proxy: "https://cors-anywhere.argvchs.workers.dev/https://github.com/login/oauth/access_token"
+        
     })
     gitalk.render("gitalk-container")
 </script>
