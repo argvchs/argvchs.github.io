@@ -274,7 +274,7 @@ mjx-container[display="true"] + br {
             
             <span class="tag">
                 
-                <a href="/tags/主题" style="color: #00a596">
+                <a href="/tags/主题" style="color: #03a9f4">
                     主题
                 </a>
             </span>
@@ -385,14 +385,16 @@ Staticfile CDN</p>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">enable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">code</span><span class="kw">:</span><span class="at"> 粤ICP备xxxxxx号</span></span></code></pre></div></li>
 <li><p>Gitalk</p>
-<p>本主题引入的是 Gitalk 评论系统，默认开启</p>
+<p>本主题引入的是 Gitalk 评论系统，默认关闭</p>
 <p>考虑到博客可能部署到多个网站同步评论，但 OAuth APP 只能有一个回调
 URL，所以添加了 <code>sites</code> 参数用于其他网站的评论，请注册多个
 Oauth APP</p>
 <p><strong>同样如果没有其他网站，请在 <code>sites:</code> 后添加一个
 <code>[]</code></strong></p>
+<p>由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了
+<code>proxy</code> 配置，搭建 CORS 代理可以看<a href="">这篇文章</a></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gitalk</span><span class="kw">:</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">enable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">enable</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">clientID</span><span class="kw">:</span><span class="co"> # Default ClientID</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">clientSecret</span><span class="kw">:</span><span class="co"> # Default ClientSecret</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">repo</span><span class="kw">:</span><span class="co"> # The name of repository of store comments</span></span>
@@ -400,7 +402,7 @@ Oauth APP</p>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">admin</span><span class="kw">:</span><span class="co"> # GitHub repo owner and collaborators, only these guys can initialize github issues</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">language</span><span class="kw">:</span><span class="at"> zh-CN</span><span class="co"> # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.</span></span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">proxy</span><span class="kw">:</span><span class="co"> # CORS proxy</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">    sites:</span><span class="co"># Sites</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sites</span><span class="kw">:</span><span class="co"> # Sites</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">        # Example:</span></span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">        # &lt;www.example.com&gt;:</span></span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">        #    clientID: &lt;client-id&gt;</span></span>

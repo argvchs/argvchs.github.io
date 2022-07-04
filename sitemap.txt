@@ -1,10 +1,11 @@
+https://argvchs.github.io/2022/07/04/build-cors-anywhere/
+https://argvchs.github.io/2022/04/17/hexo-blog-2/
 https://argvchs.github.io/2022/05/10/hexo-theme-particlex/
 https://argvchs.github.io/2022/06/17/hexo-latex/
 https://argvchs.github.io/2022/04/17/hexo-blog-1/
 https://argvchs.github.io/archives/index.html
 https://argvchs.github.io/about/index.html
 https://argvchs.github.io/2022/04/17/hexo-blog-3/
-https://argvchs.github.io/2022/04/17/hexo-blog-2/
 https://argvchs.github.io/2022/04/17/hexo-blog-4/
 https://argvchs.github.io/categories/index.html
 https://argvchs.github.io/2022/04/12/hello-world/
@@ -13,5 +14,8 @@ https://argvchs.github.io/
 https://argvchs.github.io/tags/Hexo/
 https://argvchs.github.io/tags/%E4%B8%BB%E9%A2%98/
 https://argvchs.github.io/tags/LaTeX/
+https://argvchs.github.io/tags/Gitalk/
+https://argvchs.github.io/tags/CORS/
+https://argvchs.github.io/tags/Heroku/
 https://argvchs.github.io/categories/%E6%95%99%E7%A8%8B/
 https://argvchs.github.io/categories/%E5%B7%A5%E5%85%B7/

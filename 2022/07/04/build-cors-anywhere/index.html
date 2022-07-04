@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Hexo 博客搭建教程 II | Argvchs の小窝</title>
+        <title>搭建 CORS Anywhere 代理 | Argvchs の小窝</title>
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -240,14 +240,14 @@ mjx-container[display="true"] + br {
                         
 <div class="article">
     <div>
-        <h1>Hexo 博客搭建教程 II </h1>
+        <h1>搭建 CORS Anywhere 代理 </h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
             </span>
-            2022/4/17
+            2022/7/4
         </span>
         
         <span class="category">
@@ -267,8 +267,22 @@ mjx-container[display="true"] + br {
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style="color: #00bcd4">
-                    Hexo
+                <a href="/tags/Gitalk" style="color: #03a9f4">
+                    Gitalk
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/CORS" style="color: #00a596">
+                    CORS
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Heroku" style="color: #00a596">
+                    Heroku
                 </a>
             </span>
             
@@ -276,78 +290,81 @@ mjx-container[display="true"] + br {
         
     </div>
     <div class="content" v-pre>
-        <p>书接上文：<a href="/2022/04/17/hexo-blog-1">Hexo 博客搭建教程
-I</a></p>
+        <p>Gitalk 官方 CORS 代理用了
+Cloudflare，国内访问速度过慢，这篇文章介绍一下搭建自己 CORS Anywhere
+代理的过程</p>
 <span id="more"></span>
-<h2 id="安装主题">1. 安装主题</h2>
-<p>首先在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">这里</a>选择一个主题<br>
-上面的图片是预览页，下面的蓝色链接是 Github 项目页<br>
-选好主题后就要安装，在博客根目录下运行下面的命令将主题 Clone
-到本地<br>
-<strong><code>&lt;theme-dir&gt;</code>
-为主题链接，<code>&lt;theme-name&gt;</code> 为主题名称</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>theme-dir<span class="op">&gt;</span>.git themes<span class="dt">\&lt;</span>theme-name<span class="op">&gt;</span></span></code></pre></div>
-<p><del>什么？Github 打不开？这只能怪你不会 <a target="_blank" rel="noopener" href="https://gitlab.com/getlantern/lantern-binaries-mirror">KXSW</a></del><br>
-比如我的主题是 <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX</a>，就是
-<code>git clone https://github.com/argvchs/hexo-theme-particlex.git themes\particlex</code><br>
-安装完成后，在博客根目录下的 <code>_config.yml</code> 中设置 theme
-参数为你的主题名称，就可以切换主题，一般主题在 Github
-项目页下都会有介绍和配置说明，可以按照说明自定义页面，这里我就不细说了</p>
-<h2 id="创建关于页和文章分类">2. 创建关于页和文章分类</h2>
-<ul>
-<li>Categories/Tags 文章分类<br>
-<strong><code>&lt;root&gt;</code> 为你博客的根目录</strong><br>
-输入命令 <code>hexo new page categories</code> 创建 Categories
-页面，打开<code>&lt;root&gt;\source\categories</code>下的 index.md
-文件，在文章前添加 type 参数值为 <code>"categories"</code><br>
-输入命令 <code>hexo new page tags</code> 创建 Tags
-页面，打开<code>&lt;root&gt;\source\tags</code>下的 index.md
-文件，在文章前添加 type 参数值为 <code>"tags"</code></li>
-<li>About 关于页<br>
-先按照创建文章分类的方法，创建 About 页面，然后在下面添加内容即可</li>
-</ul>
-<h2 id="自定义网站配置">3. 自定义网站配置</h2>
-<p>打开博客根目录下的 <code>_config.yml</code>，下面是主要参数的介绍</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="co"> # 标题</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="co"> # 副标题</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="co"> # 描述</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">keywords</span><span class="kw">:</span><span class="co"> # 关键字</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="co"> # 作者</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">language</span><span class="kw">:</span><span class="co"> # 语言</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">timezone</span><span class="kw">:</span><span class="co"> # 时区</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span><span class="kw">:</span><span class="co"> # 网址</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">root</span><span class="kw">:</span><span class="co"> # 根目录</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">permalink</span><span class="kw">:</span><span class="co"> # 文章链接格式</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">permalink_defaults</span><span class="kw">:</span><span class="co"> # 链接默认值</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">source_dir</span><span class="kw">:</span><span class="co"> # 源文件夹，内容的存储位置</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">public_dir</span><span class="kw">:</span><span class="co"> # 公用文件夹，静态文件的生成位置</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tag_dir</span><span class="kw">:</span><span class="co"> # 标签目录</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">archive_dir</span><span class="kw">:</span><span class="co"> # 存档目录</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">category_dir</span><span class="kw">:</span><span class="co"> # 分类目录</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">skip_render</span><span class="kw">:</span><span class="co"> # 复制到原始路径，不进行渲染</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="fu">new_post_name</span><span class="kw">:</span><span class="co"> # 新帖子的文件名格式</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">titlecase</span><span class="kw">:</span><span class="co"> # 将标题转换为小写1/大写2 *</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">external_link.enable</span><span class="kw">:</span><span class="co"> # 在新标签页中打开外部链接</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">post_asset_folder</span><span class="kw">:</span><span class="co"> # 启用资源文件夹功能</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">filename_case</span><span class="kw">:</span><span class="co"> # 将文件名转换小写小写1/大写2</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">relative_link</span><span class="kw">:</span><span class="co"> # 是否创建相对于根文件夹的链接</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">index_generator.per_page</span><span class="kw">:</span><span class="co"> # 每页显示的文章数</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">index_generator.order_by</span><span class="kw">:</span><span class="co"> # 发布顺序</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">date_format</span><span class="kw">:</span><span class="co"> # 日期格式</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">time_format</span><span class="kw">:</span><span class="co"> # 时间格式</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">per_page</span><span class="kw">:</span><span class="co"> # 每个页面上显示的文章数</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">pagination_dir</span><span class="kw">:</span><span class="co"> # 网址格式</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span><span class="kw">:</span><span class="co"> # 主题名称</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_config</span><span class="kw">:</span><span class="co"> # 主题配置，覆盖主题默认值</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">deploy</span><span class="kw">:</span><span class="co"> # 部署设置</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">include</span><span class="kw">:</span><span class="co"> # 包括隐藏文件</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="fu">exclude</span><span class="kw">:</span><span class="co"> # 排除文件/文件夹</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="fu">ignore</span><span class="kw">:</span><span class="co"> # 忽略文件/文件夹</span></span></code></pre></div>
-<p>由于参数过多，只写了一部分，其他可以参考<a target="_blank" rel="noopener" href="https://hexo.io/docs/configuration">Hexo 官方文档</a><br>
-<strong>P.S.：titlecase 参数改变后部分主题可能检测不到 Categories 和
-Tags 页面</strong></p>
-<p>下一篇：<a href="/2022/04/17/hexo-blog-3">Hexo 博客搭建教程
-III</a></p>
+<h2 id="下载项目">1. 下载项目</h2>
+<p>打开 <a target="_blank" rel="noopener" href="https://github.com/Rob--W/cors-anywhere">CORS
+Anywhere</a> 项目地址，点击右上角 Fork 按钮，点 Create
+Fork，复制到你的仓库<br>
+在任意位置输入以下命令，克隆项目到本地，<br>
+<strong><code>&lt;name&gt;</code> 是你自己的 Github 用户名</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>name<span class="op">&gt;</span>/cors-anywhere.git <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> cors-anywhere</span></code></pre></div>
+<h2 id="注册-heroku">2. 注册 Heroku</h2>
+<p>CORS Anywhere 是在 Heroku 上运行的，所以要注册一下，在<a target="_blank" rel="noopener" href="https://signup.heroku.com/">这里</a>注册</p>
+<blockquote>
+<p><strong><em>We could not verify you are not a robot. Please try the
+CAPTCHA again.</em></strong></p>
+</blockquote>
+<p>诶？没有 CAPTCHA 啊？<del>那是你不会 <a target="_blank" rel="noopener" href="https://gitlab.com/getlantern/lantern-binaries-mirror">KXSW</a></del><br>
+KXSW 完，刷新一下，就会出现 CHAPCHA 检测了</p>
+<h2 id="部署代理">3. 部署代理</h2>
+<p>打开 <a target="_blank" rel="noopener" href="https://www.heroku.com">Heroku</a>，点击中间的 Create
+new app 按钮，输入你喜欢的项目名称，创建项目<br>
+下载 <a target="_blank" rel="noopener" href="https://devcenter.heroku.com/articles/heroku-cli">Heroku
+CLI</a>，安装完运行 <code>heroku -v</code>检测安装<br>
+然后登陆 Heroku
+CLI，运行<code>heroku login -i</code>，填入你的邮箱和密码 找到你刚才下载
+CORS Anywhere 项目的位置，<code>cd</code>
+到项目根目录，执行以下命令部署<br>
+<strong><code>&lt;appname&gt;</code> 是你刚才设置的项目名称</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">heroku</span> git:remote <span class="at">-a</span> <span class="op">&lt;</span>appname<span class="op">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-am</span> <span class="st">"first commit"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push heroku master</span></code></pre></div>
+<h2 id="设置黑白名单">4. 设置黑/白名单</h2>
+<p>如果你的 CORS 代理被别人得知，传播开来，用于许多人的 Gitalk
+代理中，你的代理就会很卡，这种情况就要设置访问黑/白名单</p>
+<p>进入你 Heroku 的项目主页，点击右边的 Settings，找到 Reveal Config
+Vars 按钮，打开配置变量设置<br>
+在左边输入 <code>CORSANYWHERE_BLACKLIST</code>（黑名单）或
+<code>CORSANYWHERE_WHITELIST</code>（白名单），在右边输入你要设置黑/白名单的网站域名，要加上
+<code>http://</code> 或 <code>https://</code> 前缀，用 <code>,</code>
+分割<br>
+<strong>同一个域名要分别用 <code>http://</code> 和 <code>https://</code>
+设置两次，协议不同被视为不同源</strong></p>
+<h2 id="修改-gitalk-设置">5. 修改 Gitalk 设置</h2>
+<p>部署完代理，就要修改 Gitalk 了，这里给出了两种方法，根据你的主题
+<code>_config.yml</code> 配置选择</p>
+<ol type="1">
+<li><p>有 <code>gitalk/proxy</code> 配置<br>
+有这个配置当然最好，将其修改为以下内容</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gitalk</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">    # ...</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">proxy</span><span class="kw">:</span><span class="at"> https://&lt;appname&gt;.herokuapp.com/https://github.com/login/oauth/access_token</span></span></code></pre></div></li>
+<li><p>没有 <code>gitalk/proxy</code> 配置<br>
+没有配置，就要自己修改了，从你主题文件夹下，找出有类似以下内容的文件，<strong>可能细节不太一样</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> gitalk <span class="op">=</span> <span class="kw">new</span> <span class="fu">Gitalk</span>({</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">clientID</span><span class="op">:</span> clientID<span class="op">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">clientSecret</span><span class="op">:</span> clientSecret<span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">repo</span><span class="op">:</span> <span class="st">"&lt;%- theme.gitalk.repo %&gt;"</span><span class="op">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">owner</span><span class="op">:</span> <span class="st">"&lt;%- theme.gitalk.owner %&gt;"</span><span class="op">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">admin</span><span class="op">:</span> [<span class="st">"&lt;%- theme.gitalk.admin %&gt;"</span>]<span class="op">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">language</span><span class="op">:</span> <span class="st">"&lt;%- theme.gitalk.language %&gt;"</span><span class="op">,</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">id</span><span class="op">:</span> location<span class="op">.</span><span class="at">pathname</span><span class="op">,</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">distractionFreeMode</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>在 <code>new Gitalk({...})</code> 的大括号中添加这一条</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>proxy<span class="op">:</span> <span class="st">"https://&lt;appname&gt;.herokuapp.com/https://github.com/login/oauth/access_token"</span><span class="op">,</span></span></code></pre></div>
+<p>添加完，你文件的 Gitalk 部分应该类似这样</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> gitalk <span class="op">=</span> <span class="kw">new</span> <span class="fu">Gitalk</span>({</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// something...</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">proxy</span><span class="op">:</span> <span class="st">"https://&lt;appname&gt;.herokuapp.com/https://github.com/login/oauth/access_token"</span><span class="op">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>这样就配置好了</p></li>
+</ol>
 
     </div>
     
