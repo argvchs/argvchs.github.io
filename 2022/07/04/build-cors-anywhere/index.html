@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>搭建 CORS Anywhere 代理 | Argvchs の小窝</title>
+        <title>搭建 CORS Anywhere | Argvchs の小窝</title>
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -240,7 +240,7 @@ mjx-container[display="true"] + br {
                         
 <div class="article">
     <div>
-        <h1>搭建 CORS Anywhere 代理 </h1>
+        <h1>搭建 CORS Anywhere </h1>
     </div>
     <div class="info">
         <span class="date">
@@ -267,7 +267,7 @@ mjx-container[display="true"] + br {
             
             <span class="tag">
                 
-                <a href="/tags/Gitalk" style="color: #00bcd4">
+                <a href="/tags/Gitalk" style="color: #03a9f4">
                     Gitalk
                 </a>
             </span>
@@ -281,7 +281,7 @@ mjx-container[display="true"] + br {
             
             <span class="tag">
                 
-                <a href="/tags/Heroku" style="color: #03a9f4">
+                <a href="/tags/Heroku" style="color: #00a596">
                     Heroku
                 </a>
             </span>
@@ -290,9 +290,8 @@ mjx-container[display="true"] + br {
         
     </div>
     <div class="content" v-pre>
-        <p>Gitalk 官方 CORS 代理用了
-Cloudflare，国内访问速度过慢，这篇文章介绍一下搭建自己 CORS Anywhere
-代理的过程</p>
+        <p>Gitalk 官方代理使用 Cloudflare，速度过慢，这里介绍一下自己搭建 CORS
+Anywhere 代理的过程</p>
 <span id="more"></span>
 <h2 id="下载项目">1. 下载项目</h2>
 <p>打开 <a target="_blank" rel="noopener" href="https://github.com/Rob--W/cors-anywhere">CORS
@@ -304,11 +303,17 @@ Fork，复制到你的仓库<br>
 <h2 id="注册-heroku">2. 注册 Heroku</h2>
 <p>CORS Anywhere 是在 Heroku 上运行的，所以要注册一下，在<a target="_blank" rel="noopener" href="https://signup.heroku.com/">这里</a>注册</p>
 <blockquote>
-<p><strong><em>We could not verify you are not a robot. Please try the
-CAPTCHA again.</em></strong></p>
+<p>We could not verify you are not a robot. Please try the CAPTCHA
+again.</p>
 </blockquote>
-<p>诶？没有 CAPTCHA 啊？<del>那是你不会 <a target="_blank" rel="noopener" href="https://gitlab.com/getlantern/lantern-binaries-mirror">KXSW</a></del><br>
-KXSW 完，刷新一下，就会出现 CHAPCHA 检测了</p>
+<p>诶？哪有 CAPTCHA？<del><strong><em>我***</em></strong></del><br>
+Heroku 因为用了 <strong>Google</strong> 的 CHAPCHA 服务，就需要 <a target="_blank" rel="noopener" href="https://github.com/getlantern/download">KXSW</a></p>
+<p>什么？Github 打不开？那是你不会修改 <a href="/assets/hosts">HOSTS</a><br>
+下载 HOSTS 文件，替换
+<code>C:\Windows\System32\drivers\etc\hosts</code>，运行
+<code>ipconfig /flushdns</code> 刷新 DNS 缓存，重启浏览器，应该可以打开
+Github 下载</p>
+<p>刷新一下，就会出现 CHAPCHA 检测了</p>
 <h2 id="部署代理">3. 部署代理</h2>
 <p>打开 <a target="_blank" rel="noopener" href="https://www.heroku.com">Heroku</a>，点击中间的 Create
 new app 按钮，输入你喜欢的项目名称，创建项目<br>

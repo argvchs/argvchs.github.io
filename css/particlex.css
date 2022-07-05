@@ -1090,6 +1090,9 @@ footer .footer-icon {
     border: 2px solid #a5c2f5;
     border-radius: 50%;
 }
+.math .MathJax svg {
+    vertical-align: baseline !important;
+}
 .gt-container *:not(.gt-header-textarea) {
     font-family: unset !important;
 }
@@ -1399,6 +1402,9 @@ footer .footer-icon {
     #home-posts .post {
         padding: 20px 30px;
         margin: 30px 0;
+    }
+    #home-posts .post .post-tags {
+        padding-right: 69px;
     }
     #home-posts .post .excerpt {
         padding: 20px 0;
