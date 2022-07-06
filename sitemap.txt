@@ -1,3 +1,4 @@
+https://argvchs.github.io/2022/07/06/easypytool/
 https://argvchs.github.io/2022/05/10/hexo-theme-particlex/
 https://argvchs.github.io/2022/07/04/build-cors-anywhere/
 https://argvchs.github.io/2022/06/17/hexo-latex/
