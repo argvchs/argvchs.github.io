@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Categories | Argvchs の小窝</title>
+        <title>安装 MinGW-W64 | Argvchs の小窝</title>
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -237,24 +237,21 @@ mjx-container[display="true"] + br {
 </nav>
                     </div>
                     <div id="main">
-                         
-<div class="categories-tags">
-    
-    <div class="all-s">
-        
-        
-        <span>
-            <a href="/categories/教程/" style="background: #00bcd4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                </span>
-                教程
-            </a>
+                        
+<div class="article">
+    <div>
+        <h1>安装 MinGW-W64 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/7/21
         </span>
         
-        
-        <span>
-            <a href="/categories/工具/" style="background: #ffa2c4">
+        <span class="category">
+            <a href="/categories/工具">
                 <span class="icon">
                     <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                 </span>
@@ -262,10 +259,61 @@ mjx-container[display="true"] + br {
             </a>
         </span>
         
-    </div>
-    <div id="archives">
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/C/C++" style="color: #ffa2c4">
+                    C/C++
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/MinGW" style="color: #00a596">
+                    MinGW
+                </a>
+            </span>
+            
+        </span>
         
     </div>
+    <div class="content" v-pre>
+        <p>MinGW-w64 安装教程</p>
+<span id="more"></span>
+<h2 id="前言">0. 前言</h2>
+<p>看了好多 MinGW-w64 安装教程，都是从 SourceForge
+上下载，版本很旧，C++17/C++20 一些 STL
+库还没更新，不能用万能头，就很难受啊，这篇文章教你如何找到最新 MinGW-w64
+版本</p>
+<h2 id="找到-mingw-w64">2. 找到 MinGW-w64</h2>
+<p>打开 <a target="_blank" rel="noopener" href="https://www.mingw-w64.org/downloads/" class="uri">https://www.mingw-w64.org/downloads/</a></p>
+<p><img src="https://img1.imgtp.com/2022/07/21/ByLoTNIv.png" alt="mingw-w64-download"></p>
+<p>如果你按照网上大部分教程的描述，找到 <a target="_blank" rel="noopener" href="http://sourceforge.net/projects/mingw-w64/files/mingw-w64/">SourceForge</a>，就会显示如下</p>
+<p><img src="https://img1.imgtp.com/2022/07/21/8upMYZFU.png" alt="mingw-w64-sourceforge"></p>
+<p>虽然最新版本是 v10.0.0，可那是源码，最新构建版本是 v8.1.0，太旧了</p>
+<h2 id="最新版本">3. 最新版本</h2>
+<p>其实，如果你仔细看一看，就会发现上面有一个 <a target="_blank" rel="noopener" href="https://github.com/niXman/mingw-builds-binaries/releases">MinGW-Builds</a>，但因为描述太少被忽略了<br>
+看一下版本：Release 12.1.0-rt_v10-rev3，WC 这么新，往下翻</p>
+<p><img src="https://img1.imgtp.com/2022/07/21/tbRax9xz.png" alt="mingw-w64-12.1.0"></p>
+<p>竟然还有构建版本！<br>
+<strong>这里 <code>i686</code> 是 32 位版本，<code>x86_64</code> 是 64
+位版本，<code>seh</code> 和 <code>dwarf</code> 性能更好，比
+<code>sjlj</code> 要快一些 </strong><br>
+按需下载即可</p>
+
+    </div>
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
 </div>
                          
 <footer id="footer">
@@ -306,6 +354,41 @@ mjx-container[display="true"] + br {
             // });
         </script>
         
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = "170844d595d9facb0be0", clientSecret = "21b990860bd70f9ac33d06f06d3232e82c464a3a";
+    
+    if (window.location.host == "argvchs.github.io") {
+        clientID = "170844d595d9facb0be0";
+        clientSecret = "21b990860bd70f9ac33d06f06d3232e82c464a3a";
+    }
+    
+    if (window.location.host == "argvchs.netlify.app") {
+        clientID = "10e5540a489691cc9d41";
+        clientSecret = "b85c16d808150287a7ba8215fa9021470783909d";
+    }
+    
+    if (window.location.host == "argvchs.vercel.app") {
+        clientID = "cc3e39819ab1db56cbcc";
+        clientSecret = "31e556e8e6275f47e1c847c368b654e7f26544b1";
+    }
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: "gitalk-comments",
+        owner: "argvchs",
+        admin: ["argvchs"],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: false,
+        
+        proxy: "https://cors-anywhere-argvchs.herokuapp.com/https://github.com/login/oauth/access_token"
+        
+    })
+    gitalk.render("gitalk-container")
+</script>
+
 
     </body>
 </html>

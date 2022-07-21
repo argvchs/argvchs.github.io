@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://argvchs.github.io/2022/07/21/mingw-w64-install/</loc>
+    
+    <lastmod>2022-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://argvchs.github.io/2022/07/06/easypytool/</loc>
     
     <lastmod>2022-07-06</lastmod>
@@ -178,6 +187,20 @@
   
   <url>
     <loc>https://argvchs.github.io/tags/PIP/</loc>
+    <lastmod>2022-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://argvchs.github.io/tags/C-C/</loc>
+    <lastmod>2022-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://argvchs.github.io/tags/MinGW/</loc>
     <lastmod>2022-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
