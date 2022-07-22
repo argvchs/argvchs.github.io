@@ -202,7 +202,7 @@ body {
     width: 100%;
     background: #f6f8fa;
     color: #000000d9;
-    font-family: "Poppins", "Noto Sans SC", sans-serif;
+    font-family: "Poppins", "Source Han Sans SC", sans-serif;
     font-size: 14px;
     font-weight: 500;
     scrollbar-color: #8ab5ff #e6efff;
@@ -237,35 +237,35 @@ ol li {
 h1 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "Poppins", "Noto Sans SC", sans-serif;
+    font-family: "Poppins", "Source Han Sans SC", sans-serif;
     color: #1e3e3f;
     font-size: 30px;
 }
 h2 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "Poppins", "Noto Sans SC", sans-serif;
+    font-family: "Poppins", "Source Han Sans SC", sans-serif;
     color: #1e3e3f;
     font-size: 27px;
 }
 h3 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "Poppins", "Noto Sans SC", sans-serif;
+    font-family: "Poppins", "Source Han Sans SC", sans-serif;
     color: #1e3e3f;
     font-size: 24px;
 }
 h4 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "Poppins", "Noto Sans SC", sans-serif;
+    font-family: "Poppins", "Source Han Sans SC", sans-serif;
     color: #1e3e3f;
     font-size: 21px;
 }
 h5 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "Poppins", "Noto Sans SC", sans-serif;
+    font-family: "Poppins", "Source Han Sans SC", sans-serif;
     color: #1e3e3f;
     font-size: 18px;
 }
@@ -696,7 +696,7 @@ pre .language {
     display: inline-block;
     margin-left: 30px;
     margin-right: 20px;
-    font-family: "Poppins", "Noto Sans SC", sans-serif;
+    font-family: "Poppins", "Source Han Sans SC", sans-serif;
     text-transform: uppercase;
     color: #555;
 }
@@ -1100,7 +1100,7 @@ footer .footer-icon {
     font-family: unset !important;
 }
 .gt-header-textarea {
-    font-family: "Fira Code", "Noto Sans SC", monospace;
+    font-family: "Fira Code", "Source Han Sans SC", monospace;
 }
 .gt-container .markdown-body {
     word-break: break-word;
@@ -1296,7 +1296,7 @@ footer .footer-icon {
     #home-head .home-info .info .wrap h1 {
         font-size: 52px;
         font-weight: bold;
-        font-family: "Poppins", "Noto Sans SC", sans-serif;
+        font-family: "Poppins", "Source Han Sans SC", sans-serif;
         margin-bottom: 10px;
     }
     #home-head .home-info .info .wrap h3 {
@@ -1401,7 +1401,7 @@ footer .footer-icon {
     #home-head .home-info .info .wrap h1 {
         font-size: 46px;
         font-weight: bold;
-        font-family: "Poppins", "Noto Sans SC", sans-serif;
+        font-family: "Poppins", "Source Han Sans SC", sans-serif;
         margin-bottom: 10px;
     }
     #home-head .home-info .info .wrap h3 {
