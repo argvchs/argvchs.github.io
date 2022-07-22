@@ -6,7 +6,7 @@ for (var i = 0; i < codes.length; i++) {
         return x != "sourceCode";
     })[0];
     if (!lang) lang = "text";
-    codes[i].innerHTML += "<div class='language'>" + lang + "</div>";
+    codes[i].innerHTML += '<div class="language">' + lang + "</div>";
 }
 const App = Vue.createApp({
     data() {
