@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Hexo 博客搭建教程 I | Argvchs の小窝</title>
+        <title>GFonts-Helper 使用说明 | Argvchs の小窝</title>
         <meta name="author" content="Argvchs">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -243,22 +243,22 @@ mjx-container[display="true"] + br {
                         
 <div class="article">
     <div>
-        <h1>Hexo 博客搭建教程 I </h1>
+        <h1>GFonts-Helper 使用说明 </h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
             </span>
-            2022/4/17
+            2022/7/25
         </span>
         
         <span class="category">
-            <a href="/categories/教程">
+            <a href="/categories/工具">
                 <span class="icon">
                     <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                 </span>
-                教程
+                工具
             </a>
         </span>
         
@@ -270,8 +270,22 @@ mjx-container[display="true"] + br {
             
             <span class="tag">
                 
-                <a href="/tags/Hexo" style="color: #03a9f4">
-                    Hexo
+                <a href="/tags/字体" style="color: #03a9f4">
+                    字体
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Google-Fonts" style="color: #ffa2c4">
+                    Google Fonts
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/NPM" style="color: #ffa2c4">
+                    NPM
                 </a>
             </span>
             
@@ -279,52 +293,22 @@ mjx-container[display="true"] + br {
         
     </div>
     <div class="content" v-pre>
-        <p>我搭建这个博客搜了好多教程，都不是特别全，就写了这篇教程</p>
+        <p><a target="_blank" rel="noopener" href="https://github.com/argvchs/gfonts-helper">GFonts-Helper</a>
+是一个下载并压缩 Google Fonts 的工具</p>
 <span id="more"></span>
-<h2 id="前言">0. 前言</h2>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用
-Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>
-学习 Markdown 语法可以看 Github 官方文档：<a target="_blank" rel="noopener" href="https://docs.github.com/cn/get-started/writing-on-github">基本撰写和格式语法</a></p>
-<h2 id="安装-git-和-node.js">1. 安装 Git 和 Node.js</h2>
-<ul>
-<li>Git<br>
-从 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a> 下载 Git<br>
-完成后用 <code>git --version</code> 命令检查，有提示即安装正确</li>
-<li>Node.js<br>
-从 <a target="_blank" rel="noopener" href="https://nodejs.org" class="uri">https://nodejs.org</a> 下载
-Node.js，选择 LTS 版本，安装一路确认即可<br>
-完成后用 <code>node -v</code> 和 <code>npm -v</code>
-两个命令检查，有提示即安装正确</li>
-</ul>
-<h2 id="启用-corepack可选">2. 启用 Corepack（可选）</h2>
-<p>运行 <code>corepack enable</code> 启用 Corepack<br>
-启用后自动安装 Yarn 和
-PNPM，这样以后的命令都可以换成自己喜欢的包管理器<br>
-这里是速度参考<br>
-<img src="https://img1.imgtp.com/2022/07/03/Aj0jYmcE.svg" alt="pnpm-vs-npm-vs-yarn"><br>
-虽然 PNPM 较快，但创建 Vue/React 项目时可能会有错误</p>
-<h2 id="安装-hexo-cli">3. 安装 Hexo CLI</h2>
-<p>输入命令 <code>npm i -g hexo</code>， 用 <code>hexo -v</code>
-检查安装<br>
-新建一个文件夹，作为博客目录，cd 进入文件夹，运行
-<code>hexo init &amp; npm i</code></p>
-<p>Hexo 官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs" class="uri">https://hexo.io/zh-cn/docs</a></p>
-<h2 id="hexo-的一些命令">4. Hexo 的一些命令</h2>
-<ul>
-<li>生成静态文件：<code>hexo g</code></li>
-<li>清除静态文件：<code>hexo cl</code></li>
-<li>在本地运行：<code>hexo s</code></li>
-<li>部署到网站：<code>hexo d</code></li>
-<li>生成静态文件并部署到网站：<code>hexo d -g</code> 或
-<code>hexo g -d</code></li>
-<li>创建新文章：<code>hexo new &lt;post-name&gt;</code>
-<strong><code>&lt;post-name&gt;</code> 为文件名</strong>*</li>
-</ul>
-<p><strong>P.S.：创建新文章命令中的<code>&lt;post-name&gt;</code>是文件名，标题在文章中的
-title 参数中修改，文件名建议全部小写，若有大写字母，部署后部分主题可能会
-404</strong></p>
-<p>下一篇：<a href="/2022/04/17/hexo-blog-2">Hexo 博客搭建教程
-II</a></p>
+<h2 id="安装">1. 安装</h2>
+<p>输入命令</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> i <span class="at">-g</span> gfonts-helper</span></code></pre></div>
+<h2 id="使用">2. 使用</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gfonts-helper</span> <span class="op">&lt;</span>url<span class="op">&gt;</span></span></code></pre></div>
+<p><code>&lt;url&gt;</code> 是 Google Fonts API 的网址，e.g.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gfonts-helper</span> <span class="st">"https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap"</span></span></code></pre></div>
+<p>还可以换成缩写</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gfhelper</span> <span class="op">&lt;</span>url<span class="op">&gt;</span></span></code></pre></div>
+<p>运行完生成 <code>download.css</code> <code>fonts.min.css</code>
+两个文件和一个文件夹 <code>fonts</code></p>
+<p>要在网站中使用，导入 <code>fonts.min.css</code>即可</p>
+<p><code>download.css</code> 是下载文件，可以删除</p>
 
     </div>
     

@@ -1,3 +1,4 @@
+https://argvchs.github.io/2022/07/25/gfonts-helper/
 https://argvchs.github.io/2022/07/21/mingw-w64-install/
 https://argvchs.github.io/2022/05/10/hexo-theme-particlex/
 https://argvchs.github.io/2022/06/17/hexo-latex/
@@ -23,5 +24,8 @@ https://argvchs.github.io/tags/%E4%B8%BB%E9%A2%98/
 https://argvchs.github.io/tags/C-C/
 https://argvchs.github.io/tags/MinGW/
 https://argvchs.github.io/tags/LaTeX/
+https://argvchs.github.io/tags/%E5%AD%97%E4%BD%93/
+https://argvchs.github.io/tags/Google-Fonts/
+https://argvchs.github.io/tags/NPM/
 https://argvchs.github.io/categories/%E6%95%99%E7%A8%8B/
 https://argvchs.github.io/categories/%E5%B7%A5%E5%85%B7/
