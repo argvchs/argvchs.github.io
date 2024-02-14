@@ -1,0 +1,1 @@
+mixins.home={mounted:function o(){var t=this.$refs.homeBackground;var e=t.dataset.images.split(",");var n=Math.floor(Math.random()*e.length);t.style.backgroundImage="url('".concat(e[n],"')");this.menuColor=true},methods:{homeClick:function o(){window.scrollTo({top:window.innerHeight,behavior:"smooth"})}}};
