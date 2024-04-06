@@ -51,7 +51,7 @@
     <category term="OI" scheme="https://argvchs.github.io/categories/oi/"/>
     
     
-    <category term="CSP-S" scheme="https://argvchs.github.io/tags/csps/"/>
+    <category term="CSP-S" scheme="https://argvchs.github.io/tags/csp-s/"/>
     
   </entry>
   
@@ -80,7 +80,7 @@ LS、CLS）是一个洛谷剪贴板模块规范。&lt;/p&gt;</summary>
     <link href="https://argvchs.github.io/2023/08/28/vscode-config/"/>
     <id>https://argvchs.github.io/2023/08/28/vscode-config/</id>
     <published>2023-08-28T06:54:05.000Z</published>
-    <updated>2024-03-17T03:30:15.023Z</updated>
+    <updated>2024-04-06T13:00:02.978Z</updated>
     
     
     <summary type="html">&lt;p&gt;面向 OIer 的 VSCode 配置教程。&lt;/p&gt;</summary>
