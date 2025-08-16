@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><title>Common Luogu-Paste Script | Argvchs の小窝</title><meta name="author" content="Argvchs"><meta name="description" content=""><meta name="keywords" content=""><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><link rel="icon" href="https://static-argvchs.netlify.app/images/avatar.jpg"><link rel="preconnect" href="https://s4.zstatic.net"><script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script><link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.cn"><link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"><script>let mixins={}</script><script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script><script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script><link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"><script src="/js/lib/highlight.js"></script><script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script><script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script><link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><script src="/js/lib/math.js"></script><script src="/js/lib/preview.js"></script><script src="https://s4.zstatic.net/ajax/libs/animejs/3.2.1/anime.min.js"></script><link rel="stylesheet" href="/css/main.css"><link rel="preconnect" href="https://static-argvchs.netlify.app"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Argvchs の小窝" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="Argvchs の小窝" type="application/rss+xml"></head><body><div id="layout"><transition name="fade"><div id="loading" v-show="loading"><div id="loading-circle"><h2>LOADING</h2><p>加载过慢请开启缓存 浏览器默认开启</p><img src="/images/loading.gif"></div></div></transition><div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}"><nav id="desktop-menu"><a class="title" href="/"><span>ARGVCHS の小窝</span> </a><a href="/"><i class="fa-solid fa-house fa-fw"></i> <span>&ensp;Home</span> </a><a href="/about"><i class="fa-solid fa-id-card fa-fw"></i> <span>&ensp;About</span> </a><a href="/archives"><i class="fa-solid fa-box-archive fa-fw"></i> <span>&ensp;Archives</span> </a><a href="/categories"><i class="fa-solid fa-bookmark fa-fw"></i> <span>&ensp;Categories</span> </a><a href="/tags"><i class="fa-solid fa-tags fa-fw"></i> <span>&ensp;Tags</span></a></nav><nav id="mobile-menu"><div class="title" @click="showMenuItems = !showMenuItems"><i class="fa-solid fa-bars fa-fw"></i> <span>&emsp;ARGVCHS の小窝</span></div><transition name="slide"><div class="items" v-show="showMenuItems"><a href="/"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-house fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">Home</div></div></a><a href="/about"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-id-card fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">About</div></div></a><a href="/archives"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-box-archive fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">Archives</div></div></a><a href="/categories"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-bookmark fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">Categories</div></div></a><a href="/tags"><div class="item"><div style="min-width:20px;max-width:50px;width:10%"><i class="fa-solid fa-tags fa-fw"></i></div><div style="min-width:100px;max-width:150%;width:20%">Tags</div></div></a></div></transition></nav></div><transition name="fade"><div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div></transition><div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'"><div class="article"><div><h1>Common Luogu-Paste Script</h1></div><div class="info"><span class="date"><span class="icon"><i class="fa-solid fa-calendar fa-fw"></i> </span>2023/9/17 </span><span class="category"><a href="/categories/other/"><span class="icon"><i class="fa-solid fa-bookmark fa-fw"></i> </span>其他 </a></span><span class="tags"><span class="icon"><i class="fa-solid fa-tags fa-fw"></i> </span><span class="tag"><a href="/tags/luogu/" style="color:#00a596">洛谷</a></span></span></div><div class="content" v-pre><p>Common Luogu-Paste Script（简称 Common LS、CLS）是一个洛谷剪贴板模块规范。</p><span id="more"></span><h1 id="使用">1. 使用</h1><h2 id="内容范围注释">1.1. 内容范围注释</h2><p>使用内容范围注释 <code>// begin(end) module</code> 标记模块代码的内容，若没有则全文都为模块的内容。</p><p>这样做的原因是可以将模块代码填写在 Markdown 里代码高亮。</p><pre class="markdown"><code>```js
+// begin module
+console.log(&quot;hello world&quot;);
+// end module
+```</code></pre><h2 id="require">1.2. <code>require</code></h2><p>导入一个剪贴板模块，注意要在前面添加 <code>await</code> 因为返回的是一个 <code>Promise</code>。</p><pre class="js"><code>const mod = await require(&quot;00000001&quot;);</code></pre><h2 id="require_cache">1.3. <code>require_cache</code></h2><p><code>require</code> 的缓存，注意其类型为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map"><code>Map</code></a> 而不是 <code>Object</code>。</p><pre class="js"><code>// paste: 00000001
+let x = 0;
+exports.count = () =&gt; ++x;</code></pre><pre class="js"><code>// paste: 00000002
+console.log((await require(&quot;00000001&quot;)).count()); // output: 1
+console.log((await require(&quot;00000001&quot;)).count()); // output: 2
+console.log((await require(&quot;00000001&quot;)).count()); // output: 3
+require_cache.delete(&quot;00000001&quot;);
+console.log((await require(&quot;00000001&quot;)).count()); // output: 1</code></pre><h2 id="module.exports">1.4. <code>module.exports</code></h2><p>导出模块。</p><pre class="js"><code>// paste: 00000001
+module.exports = (x) =&gt; x * x;</code></pre><pre class="js"><code>// paste: 00000002
+const square = await require(&quot;00000001&quot;);
+console.log(square(10)); // output: 100</code></pre><h2 id="exports">1.5. <code>exports</code></h2><p>导出模块，但是和 <code>module.exports</code> 用法不同。</p><pre class="js"><code>// paste: 00000001
+exports.square = (x) =&gt; x * x;</code></pre><pre class="js"><code>// paste: 00000002
+const mod = await require(&quot;00000001&quot;);
+console.log(mod.square(10)); // output: 100</code></pre><h2 id="encode-decode">1.6. <code>encode</code> <code>decode</code></h2><p>为了使模块不那么显而易见我们添加了 <code>encode</code> <code>decode</code> 功能。</p><p>支持的格式有 <code>plain</code>、<code>base64</code>、<code>hex</code>，其中 <code>plain</code> 表示不编码。</p><pre class="js"><code>console.log(encode.hex(&#39;console.log(&quot;hello world&quot;)&#39;));
+// output: 63 6f 6e 73 6f 6c 65 2e 6c 6f 67 28 22 68 65 6c 6c 6f 20 77 6f 72 6c 64 22 29
+console.log(decode.hex(&quot;63 6f 6e 73 6f 6c 65 2e 6c 6f 67 28 22 68 65 6c 6c 6f 20 77 6f 72 6c 64 22 29&quot;));
+// output: console.log(&quot;hello world&quot;)</code></pre><p>你也可以自定义编码。</p><pre class="js"><code>encode.reverse = (x) =&gt; x.split(&quot;&quot;).reverse().join(&quot;&quot;);
+decode.reverse = (x) =&gt; x.split(&quot;&quot;).reverse().join(&quot;&quot;);</code></pre><h2 id="编码注释">1.7. 编码注释</h2><p><code>// encode &lt;type&gt;</code> 表示这个模块的内容的编码格式，若没有则为 <code>plain</code>。</p><pre class="js"><code>// paste: 00000001
+// encode hex
+// begin module
+63 6f 6e 73 6f 6c 65 2e 6c 6f 67 28 22 68 65 6c 6c 6f 20 77 6f 72 6c 64 22 29
+// end module</code></pre><pre class="js"><code>// paste: 00000002
+require(&quot;00000001&quot;);
+// output: hello world</code></pre><h2 id="依赖注释">1.8. 依赖注释</h2><p><code>// require &lt;mod1&gt; &lt;mod2&gt; ...</code> 表示当前模块依赖的剪贴板模块。</p><p>依赖注释只是标明模块的依赖。</p><h2 id="linker">1.9. <code>linker</code></h2><p>由于只有主站允许 <code>eval</code>，所以要在其他地方运行 CLS 必须要用 <code>linker</code> 预处理。</p><p><code>linker</code> 返回的代码默认是不带返回值的，如果需要返回值可以在前面加上 <code>await</code>。</p><p><strong><code>linker</code> 只会链接依赖注释中标明的依赖。</strong></p><pre class="js"><code>// paste: 00000001
+// begin module
+exports.square = (x) =&gt; x * x;
+// end module</code></pre><pre class="js"><code>// paste: 00000002
+// require 00000001
+// begin module
+const mod = await require(&quot;00000001&quot;);
+exports.cube = (x) =&gt; x * mod.square(x);
+// end module</code></pre><pre class="js"><code>console.log(await linker(&quot;00000002&quot;));
+/*
+output:
+(async () =&gt; &#123;
+    const _linked_modules = new Map();
+
+    _linked_modules.set(&quot;00000002&quot;, async () =&gt; &#123;
+        const module = &#123; exports: &#123;&#125; &#125;;
+        await (async (exports, module) =&gt; &#123;
+            const mod = await require(&quot;00000001&quot;);
+            exports.cube = (x) =&gt; x * mod.square(x);
+        &#125;)(module.exports, module);
+        return module.exports;
+    &#125;);
+
+    _linked_modules.set(&quot;00000001&quot;, async () =&gt; &#123;
+        const module = &#123; exports: &#123;&#125; &#125;;
+        await (async (exports, module) =&gt; &#123;
+            exports.square = (x) =&gt; x * x;
+        &#125;)(module.exports, module);
+        return module.exports;
+    &#125;);
+
+    const require_cache = new Map();
+    const require = async (url) =&gt; &#123;
+        if (require_cache.has(url)) return require_cache.get(url);
+        let result = await _linked_modules.get(url)();
+        require_cache.set(url, result);
+        return result;
+    &#125;;
+    return require(&quot;00000002&quot;);
+&#125;)();
+*/</code></pre><h1 id="运行">2. 运行</h1><h2 id="polyfill">2.1. Polyfill</h2><p>将 CLS Polyfill 放到顶层模块代码的前面就可以了。</p><pre class="js"><code>const _async_function = (async () =&gt; &#123;&#125;).constructor;
+const _reg1 = /^\s*\/\/\s*begin\s+module\s*$((.|\n)*)^\s*\/\/\s*end\s+module\s*$/m;
+const _reg2 = /^\s*\/\/\s*encode\s+(\w+)\s*$/m;
+const _reg3 = /^\s*\/\/\s*require((\s+\w+)*)\s*$/m;
+
+const encode = &#123;&#125;;
+const decode = &#123;&#125;;
+encode.plain = (x) =&gt; x;
+decode.plain = (x) =&gt; x;
+encode.base64 = (x) =&gt; btoa(x);
+decode.base64 = (x) =&gt; atob(x);
+encode.hex = (x) =&gt; &#123;
+    let array = [...new TextEncoder().encode(x)];
+    array = array.map((i) =&gt; i.toString(16).padStart(2, &quot;0&quot;));
+    return array.join(&quot; &quot;);
+&#125;;
+decode.hex = (x) =&gt; &#123;
+    let array = x.split(&quot; &quot;);
+    array = array.map((i) =&gt; parseInt(i, 16));
+    array = Uint8Array.from(array);
+    return new TextDecoder().decode(array);
+&#125;;
+
+const require_cache = new Map();
+const require = async (url) =&gt; &#123;
+    if (require_cache.has(url)) return require_cache.get(url);
+    let response = await fetch(`/paste/$&#123;url&#125;?_contentOnly`);
+    let json = await response.json();
+    let data = json.currentData.paste.data;
+    let source = data.match(_reg1)?.[1] || data;
+    let encode = data.match(_reg2)?.[1] || &quot;plain&quot;;
+    let result = await (async () =&gt; &#123;
+        const module = &#123; exports: &#123;&#125; &#125;;
+        await _async_function(&quot;exports&quot;, &quot;module&quot;, decode[encode](source))(module.exports, module);
+        return module.exports;
+    &#125;)();
+    require_cache.set(url, result);
+    return result;
+&#125;;
+
+const linker = async (url) =&gt; &#123;
+    let result = `
+    (async () =&gt; &#123;
+        const _linked_modules = new Map();
+    `;
+    const impl_cache = new Set();
+    const impl = async (url) =&gt; &#123;
+        if (impl_cache.has(url)) return;
+        let response = await fetch(`/paste/$&#123;url&#125;?_contentOnly`);
+        let json = await response.json();
+        let data = json.currentData.paste.data;
+        let source = data.match(_reg1)?.[1] || data;
+        let encode = data.match(_reg2)?.[1] || &quot;plain&quot;;
+        let module = data.match(_reg3)?.[1] || &quot;&quot;;
+        result += `
+        _linked_modules.set(&quot;$&#123;url&#125;&quot;, async () =&gt; &#123;
+            const module = &#123; exports: &#123;&#125; &#125;;
+            await (async (exports, module) =&gt; &#123;
+                $&#123;decode[encode](source)&#125;
+            &#125;)(module.exports, module);
+            return module.exports;
+        &#125;);
+        `;
+        module = module.trim();
+        if (module !== &quot;&quot;) await Promise.all(module.split(/\s+/).map(impl));
+    &#125;;
+    await impl(url);
+    result += `
+        const require_cache = new Map();
+        const require = async (url) =&gt; &#123;
+            if (require_cache.has(url)) return require_cache.get(url);
+            let result = await _linked_modules.get(url)();
+            require_cache.set(url, result);
+            return result;
+        &#125;;
+        return require(&quot;$&#123;url&#125;&quot;);
+    &#125;)();
+    `;
+    return result;
+&#125;;</code></pre><h2 id="cdn">2.2. CDN</h2><p>我给 CLS 单独创建了一个<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/paste/3zhbijww">剪贴板</a>用于简化运行过程。</p><pre class="js"><code>await eval((await (await fetch(&quot;/paste/3zhbijww?_contentOnly&quot;)).json()).currentData.paste.data)(&quot;00000001&quot;);</code></pre><p>这样会运行 <code>00000001</code> 剪贴板模块的内容。</p><h2 id="预处理">2.3. 预处理</h2><p>先用上述的 <code>linker</code> 预处理，这样就可以直接运行了。</p><p>如果觉得预处理之后体积太大可以用 <a target="_blank" rel="noopener" href="https://try.terser.org">Terser</a> 压缩一下。</p></div><div id="comment"><div id="giscus-container" class="giscus"></div></div></div><footer id="footer"><div id="footer-wrap"><div>&copy; 2022 - 2025 Argvchs の小窝 <span id="footer-icon"><i class="fa-solid fa-font-awesome fa-fw"></i> </span>&commat;Argvchs</div><div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp; <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a></div></div></footer></div><transition name="fade"><div id="preview" ref="preview" v-show="previewShow"><img id="preview-content" ref="previewContent"></div></transition></div><script src="/js/main.js"></script><script>if(console.log("Welcome to Argvchs' blog!"),!window.hasOwnProperty("ontouchstart")){let t='<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas><script src="https://static-argvchs.netlify.app/js/fireworks.min.js"><\/script>';document.body.append(document.createRange().createContextualFragment(t))}</script><script src="https://giscus.app/client.js" data-repo="argvchs/giscus-comments" data-repo-id="R_kgDOI_uC-w" data-category="Announcements" data-category-id="DIC_kwDOI_uC-84CUToF" data-mapping="pathname" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="https://static-argvchs.netlify.app/css/giscus.css" data-lang="zh-CN" crossorigin async></script></body></html>

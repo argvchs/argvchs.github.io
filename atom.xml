@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Argvchs の小窝</title>
+  
+  <subtitle>Here&#39;s an argvchs...</subtitle>
+  <link href="https://argvchs.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://argvchs.github.io/"/>
+  <updated>2025-07-21T12:34:58.120Z</updated>
+  <id>https://argvchs.github.io/</id>
+  
+  <author>
+    <name>Argvchs</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P1135 奇怪的电梯</title>
+    <link href="https://argvchs.github.io/2023/11/24/p1135/"/>
+    <id>https://argvchs.github.io/2023/11/24/p1135/</id>
+    <published>2023-11-24T13:46:57.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P1135&quot;&gt;P1135 奇怪的电梯&lt;/a&gt;
+题解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="OI" scheme="https://argvchs.github.io/categories/oi/"/>
+    
+    
+    <category term="题解" scheme="https://argvchs.github.io/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSP-S 2023 游记</title>
+    <link href="https://argvchs.github.io/2023/10/22/csps-2023/"/>
+    <id>https://argvchs.github.io/2023/10/22/csps-2023/</id>
+    <published>2023-10-22T04:06:41.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;CSP-S 2023 游记。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="OI" scheme="https://argvchs.github.io/categories/oi/"/>
+    
+    
+    <category term="CSP-S" scheme="https://argvchs.github.io/tags/csp-s/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Common Luogu-Paste Script</title>
+    <link href="https://argvchs.github.io/2023/09/17/common-ls/"/>
+    <id>https://argvchs.github.io/2023/09/17/common-ls/</id>
+    <published>2023-09-17T14:01:53.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Common Luogu-Paste Script（简称 Common
+LS、CLS）是一个洛谷剪贴板模块规范。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="其他" scheme="https://argvchs.github.io/categories/other/"/>
+    
+    
+    <category term="洛谷" scheme="https://argvchs.github.io/tags/luogu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode 配置教程</title>
+    <link href="https://argvchs.github.io/2023/08/28/vscode-config/"/>
+    <id>https://argvchs.github.io/2023/08/28/vscode-config/</id>
+    <published>2023-08-28T06:54:05.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;面向 OIer 的 VSCode 配置教程。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://argvchs.github.io/categories/tutorial/"/>
+    
+    
+    <category term="VSCode" scheme="https://argvchs.github.io/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P9584 城市</title>
+    <link href="https://argvchs.github.io/2023/08/26/p9584/"/>
+    <id>https://argvchs.github.io/2023/08/26/p9584/</id>
+    <published>2023-08-26T15:28:08.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P9584&quot;&gt;P9584 城市&lt;/a&gt;
+题解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="OI" scheme="https://argvchs.github.io/categories/oi/"/>
+    
+    
+    <category term="题解" scheme="https://argvchs.github.io/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P9519 pay</title>
+    <link href="https://argvchs.github.io/2023/08/12/p9519/"/>
+    <id>https://argvchs.github.io/2023/08/12/p9519/</id>
+    <published>2023-08-12T13:19:17.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P9519&quot;&gt;P9519 pay&lt;/a&gt;
+题解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="OI" scheme="https://argvchs.github.io/categories/oi/"/>
+    
+    
+    <category term="题解" scheme="https://argvchs.github.io/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P9518 queue</title>
+    <link href="https://argvchs.github.io/2023/08/12/p9518/"/>
+    <id>https://argvchs.github.io/2023/08/12/p9518/</id>
+    <published>2023-08-12T13:19:15.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P9518&quot;&gt;P9518 queue&lt;/a&gt;
+题解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="OI" scheme="https://argvchs.github.io/categories/oi/"/>
+    
+    
+    <category term="题解" scheme="https://argvchs.github.io/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P3380 【模板】二逼平衡树（树套树）</title>
+    <link href="https://argvchs.github.io/2023/08/11/p3380/"/>
+    <id>https://argvchs.github.io/2023/08/11/p3380/</id>
+    <published>2023-08-11T15:05:12.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P3380&quot;&gt;P3380
+【模板】二逼平衡树（树套树）&lt;/a&gt; 题解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="OI" scheme="https://argvchs.github.io/categories/oi/"/>
+    
+    
+    <category term="题解" scheme="https://argvchs.github.io/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P1001 A+B Problem</title>
+    <link href="https://argvchs.github.io/2023/07/27/p1001/"/>
+    <id>https://argvchs.github.io/2023/07/27/p1001/</id>
+    <published>2023-07-27T13:27:54.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.luogu.com.cn/problem/P1001&quot;&gt;P1001 A+B
+Problem&lt;/a&gt; 题解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="OI" scheme="https://argvchs.github.io/categories/oi/"/>
+    
+    
+    <category term="题解" scheme="https://argvchs.github.io/tags/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装 MinGW-w64 II</title>
+    <link href="https://argvchs.github.io/2023/06/24/mingw-w64-install-2/"/>
+    <id>https://argvchs.github.io/2023/06/24/mingw-w64-install-2/</id>
+    <published>2023-06-24T01:28:06.000Z</published>
+    <updated>2025-07-21T12:34:58.120Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;突然发现可以安装 GCC 的时候顺带安装 Clang，于是又写了一篇。&lt;/p&gt;
+&lt;p&gt;上一篇是这个：&lt;a href=&quot;/2022/07/21/mingw-w64-install&quot;&gt;安装
+MinGW-w64&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://argvchs.github.io/categories/tutorial/"/>
+    
+    
+    <category term="C/C++" scheme="https://argvchs.github.io/tags/c-cpp/"/>
+    
+    <category term="MinGW" scheme="https://argvchs.github.io/tags/mingw/"/>
+    
+    <category term="GCC" scheme="https://argvchs.github.io/tags/gcc/"/>
+    
+    <category term="Clang" scheme="https://argvchs.github.io/tags/clang/"/>
+    
+  </entry>
+  
+</feed>
